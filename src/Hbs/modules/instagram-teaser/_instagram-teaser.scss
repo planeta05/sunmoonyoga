@@ -1,0 +1,54 @@
+.instagram-teaser {
+  padding-top: 200px;
+
+  @media (max-width: 600px) {
+    padding-top: 100px;
+
+    .container {
+      padding: 0;
+      width: 130vw;
+      margin-left: -15vw;
+    }
+  }
+
+  .postings {
+    display: flex;
+    justify-content: space-between;
+
+    .post-col {
+      width: 30%;
+
+      .post {
+        width: 100%;
+
+        &:hover {
+
+          img, video {
+            border-radius: 250px 120px;
+          }
+        }
+
+        img,
+        video {
+          max-width: 100%;
+          margin-bottom: 30px;
+          transition: 0.6s ease 0.2s;
+
+          @media (max-width: 600px) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    text-align: center;
+    margin: 0;
+    padding: 60px;
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.newsletter {
+  padding: 260px 0 140px;
+
+  h2, h3, h4, p {
+    color: $color-white;
+  }
+
+  h2 {
+    font-size: 20vw;
+    opacity: .2;
+    margin-left: -40px;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-end;
+
+    .text {
+      h4 {
+        margin-left: 90px;
+        margin-top: 60px;
+        margin-bottom: 0;
+
+        @media (max-width: 990px) {
+          margin-left: 70px;
+        }
+      }
+    }
+
+    form {
+      width: 420px;
+      flex-shrink: 0;
+      font-family: $font-family-circular-regular;
+      margin-left: 60px;
+      margin-bottom: -30px;
+
+      label {
+        display: none;
+      }
+
+      input {
+        background-color: rgba($color-white, .2);
+        border-radius: 0;
+        border: none;
+        color: $color-white;
+        padding: 30px 40px;
+        font-size: 20px;
+
+        &::placeholder {
+          color: rgba($color-white, .5);
+        }
+      }
+    }
+  }
+}

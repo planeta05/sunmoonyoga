@@ -1,0 +1,28 @@
+// Partials
+@import 'partials/variables';
+@import 'partials/mixins';
+
+// Vendor Styles
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/swiper/swiper-bundle.min';
+
+// Global Styles
+@import 'partials/background-position';
+@import 'partials/fonts';
+@import 'partials/layout';
+@import 'partials/spacings';
+@import 'partials/typo';
+@import 'partials/swiper';
+
+// Modules
+@import '../Hbs/modules/navbar/navbar';
+@import '../Hbs/modules/hero/hero';
+@import '../Hbs/modules/category-slider/category-slider';
+@import '../Hbs/modules/footer/footer';
+@import '../Hbs/modules/contact-form/contact-form';
+@import '../Hbs/modules/image-gallery/image-gallery';
+
+@import '../Hbs/modules/classes/classes';
+@import '../Hbs/modules/video-bg/video-bg';
+@import '../Hbs/modules/instagram-teaser/instagram-teaser';
+@import '../Hbs/modules/newsletter/newsletter';

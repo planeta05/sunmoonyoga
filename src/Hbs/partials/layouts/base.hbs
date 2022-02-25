@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="de-DE">
+<head>
+    <title>
+        {{#if title}}
+            {{title}}
+        {{else}}
+            sun moon YOGA
+        {{/if}}
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="Css/main.min.css">
+    {{#> head-block}}{{/head-block}}
+</head>
+<body>
+
+<header>
+    {{> navbar/navbar }}
+</header>
+
+<main class="">
+    {{#> content-block}}{{/content-block}}
+</main>
+
+{{> footer/footer }}
+
+{{#> scripts-block}}
+    <script src="JavaScript/bundle.js"></script>
+    <script src="JavaScript/app.js"></script>
+{{/scripts-block}}
+</body>
+</html>

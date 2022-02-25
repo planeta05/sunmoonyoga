@@ -1,0 +1,49 @@
+<div class="container">
+			<form class="contact-form validate focus-handler" method="post">
+                <h3>Lorem ipsum dolor sit amet</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="inputTopic">Thema <span>optional</span></label>
+                        <select id="inputTopic" class="form-control">
+                            <option selected="selected">Bitte wählen</option>
+                            <option>Frage zu einem teem</option>
+                            <option>Fragen zur Buchungs</option>
+                            <option>teem-Leiter:in werden</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control focus-toggle" id="inputName" placeholder="Name" data-rule="required" data-msg="Bitte geben Sie Ihren Namen ein.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail">E-Mail Adresse</label>
+                        <input type="text" class="form-control focus-toggle" id="inputEmail" placeholder="E-Mail Adresse" data-rule="email" data-msg="Bitte geben Sie eine gültige E-Mail Adresse ein.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputTopic">Thema <span>optional</span></label>
+                        <input type="text" class="form-control focus-toggle" id="inputTopic" placeholder="Thema">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="textarea">Ihre Nachricht</label>
+                        <textarea class="form-control" id="textarea" rows="5" placeholder="Deine Nachricht" data-rule="required" data-msg="Bitte teilen uns Sie Ihre Nachricht mit."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="checkPrivacyPolicy" data-rule="checked" data-msg="Bitte akzeptieren Sie die Datenschutzbestimmungen.">
+                            <label class="custom-control-label" for="checkPrivacyPolicy">Ich habe die
+                                <a href="#">Datenschutzbestimmungen</a>
+                                gelesen uns stimme diesen zu.</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">los</button>
+                </div>
+
+			</form>
+</div>

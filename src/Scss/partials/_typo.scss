@@ -5,7 +5,7 @@ h1 {
 	margin-bottom: 40px;
 
 	@media (max-width: 768px) {
-		@include font-rem(50px, 50px);
+		@include font-rem(80px, 80px);
 	}
 }
 

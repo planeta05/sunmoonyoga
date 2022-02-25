@@ -1,10 +1,14 @@
 "use strict";
 
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var CategorySlider = function CategorySlider() {
+var CategorySlider = /*#__PURE__*/_createClass(function CategorySlider() {
   _classCallCheck(this, CategorySlider);
 
   _defineProperty(this, "initCategorySlider", function () {
@@ -28,14 +32,18 @@ var CategorySlider = function CategorySlider() {
 /**
  * @desc Gallery Slider
  */
-;
+);
 "use strict";
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var ClassesBg = function ClassesBg() {
+var ClassesBg = /*#__PURE__*/_createClass(function ClassesBg() {
   var _this = this;
 
   _classCallCheck(this, ClassesBg);
@@ -71,14 +79,18 @@ var ClassesBg = function ClassesBg() {
 /**
  * @desc Gallery Slider
  */
-;
+);
 "use strict";
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var ContactForm = function ContactForm() {
+var ContactForm = /*#__PURE__*/_createClass(function ContactForm() {
   _classCallCheck(this, ContactForm);
 
   _defineProperty(this, "handleFocus", function () {
@@ -98,74 +110,18 @@ var ContactForm = function ContactForm() {
 /**
  * @desc navbar
  */
-;
+);
 "use strict";
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var SliderHero = function SliderHero() {
-  _classCallCheck(this, SliderHero);
-
-  _defineProperty(this, "initSliderHero", function () {
-    var heroSwiper = new Swiper(".hero-slider .swiper", {
-      slidesPerView: 1,
-      loop: true,
-      effect: "fade",
-      navigation: {
-        nextEl: ".swiper-hero-button-next",
-        prevEl: ".swiper-hero-button-prev"
-      }
-    });
-  });
-
-  this.sliderHero = document.querySelector(".hero-slider .swiper");
-
-  if (this.sliderHero) {
-    this.initSliderHero();
-  }
-}
-/**
- * @desc Gallery Slider
- */
-;
-"use strict";
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var Navbar = function Navbar() {
-  _classCallCheck(this, Navbar);
-
-  _defineProperty(this, "initNavbarToggle", function () {
-    document.addEventListener("click", function (event) {
-      if (event.target.closest("[data-js='navbar-toggler']")) {
-        event.preventDefault();
-        document.body.classList.toggle("navbar--open");
-      }
-    }, false);
-  });
-
-  this.navbar = document.querySelector("[data-js='navbar']");
-
-  if (this.navbar) {
-    this.initNavbarToggle();
-  }
-}
-/**
- * @desc navbar
- */
-;
-"use strict";
-"use strict";
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var ImageGallery = function ImageGallery() {
+var ImageGallery = /*#__PURE__*/_createClass(function ImageGallery() {
   _classCallCheck(this, ImageGallery);
 
   _defineProperty(this, "initImageGallery", function () {
@@ -204,7 +160,75 @@ var ImageGallery = function ImageGallery() {
 /**
  * @desc Gallery Slider
  */
-;
+);
+"use strict";
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var SliderHero = /*#__PURE__*/_createClass(function SliderHero() {
+  _classCallCheck(this, SliderHero);
+
+  _defineProperty(this, "initSliderHero", function () {
+    var heroSwiper = new Swiper(".hero-slider .swiper", {
+      slidesPerView: 1,
+      loop: true,
+      effect: "fade",
+      navigation: {
+        nextEl: ".swiper-hero-button-next",
+        prevEl: ".swiper-hero-button-prev"
+      }
+    });
+  });
+
+  this.sliderHero = document.querySelector(".hero-slider .swiper");
+
+  if (this.sliderHero) {
+    this.initSliderHero();
+  }
+}
+/**
+ * @desc Gallery Slider
+ */
+);
+"use strict";
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var Navbar = /*#__PURE__*/_createClass(function Navbar() {
+  _classCallCheck(this, Navbar);
+
+  _defineProperty(this, "initNavbarToggle", function () {
+    document.addEventListener("click", function (event) {
+      if (event.target.closest("[data-js='navbar-toggler']")) {
+        event.preventDefault();
+        document.body.classList.toggle("navbar--open");
+      }
+    }, false);
+  });
+
+  this.navbar = document.querySelector("[data-js='navbar']");
+
+  if (this.navbar) {
+    this.initNavbarToggle();
+  }
+}
+/**
+ * @desc navbar
+ */
+);
+"use strict";
 "use strict";
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -223,7 +247,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -606,9 +630,13 @@ var FormValidation = /*#__PURE__*/function () {
 }();
 "use strict";
 
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var App = function App() {
+var App = /*#__PURE__*/_createClass(function App() {
   _classCallCheck(this, App);
 
   new Navbar();
@@ -620,7 +648,7 @@ var App = function App() {
   if (document.querySelector('.form-row')) {
     new FormValidation();
   }
-};
+});
 
 new App();
 /* Form underline */

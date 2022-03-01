@@ -190,13 +190,18 @@
                     <form class="validate focus-handler" method="post">
                             <label for="inputEmail">E-Mail Adresse</label>
                             <input type="text" class="form-control focus-toggle" id="inputEmail" placeholder="E-Mail Adresse" data-rule="email" data-msg="Bitte geben Sie eine gültige E-Mail Adresse ein.">
+        
+                        <button type="submit" class=""><img src="./Images/icon-submit.svg"></button>
                     </form>
                 </div>
             </div>
+        
+            <img class="illu" src="./Images/illu-nl.svg">
         </section>
+        <!--
         <div class="stamps">
-            <!-- this is where our stamps go -->
         </div>
+        -->
 
 </main>
 
@@ -252,7 +257,7 @@
             var self = this;
 
             // Anchor hovering
-            document.querySelectorAll('a').forEach(function(el) {
+            document.querySelectorAll(['a', 'button']).forEach(function(el) {
                 el.addEventListener('mouseover', function() {
                     self.cursorEnlarged = true;
                     self.toggleCursorSize();

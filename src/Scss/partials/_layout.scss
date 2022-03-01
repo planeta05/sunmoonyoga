@@ -1,6 +1,7 @@
 html, body {
 	scroll-behavior: smooth;
-	overflow-x: hidden;
+	overflow-x: hidden !important;
+	width: 100%;
 }
 
 body {

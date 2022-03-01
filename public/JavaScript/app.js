@@ -8,25 +8,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var CategorySlider = /*#__PURE__*/_createClass(function CategorySlider() {
-  _classCallCheck(this, CategorySlider);
+var ClassesBg = /*#__PURE__*/_createClass(function ClassesBg() {
+  var _this = this;
 
-  _defineProperty(this, "initCategorySlider", function () {
-    var swiper = new Swiper(".category-slider", {
-      slidesPerView: 1,
-      effect: "fade",
-      centeredSlides: false,
-      navigation: {
-        nextEl: ".category-slider-button-next",
-        prevEl: ".category-slider-button-prev"
+  _classCallCheck(this, ClassesBg);
+
+  _defineProperty(this, "addMovement", function () {
+    var topViewport = window.pageYOffset;
+    var midViewport = topViewport + window.innerHeight / 2; // lets find the middle of each section
+    // (section, index) => {}
+
+    _this.sections.forEach(function (section, index) {
+      var topSection = section.offsetTop;
+      var midSection = topSection + section.offsetHeight / 4; // how far away is the section from the visible area of the page
+
+      var distanceToSection = midViewport - midSection;
+      console.log(distanceToSection); // check the background
+
+      if (distanceToSection > -100) {
+        var dataBackground = section.getAttribute("data-background");
+        _this.bodyTag.style.backgroundColor = dataBackground;
       }
     });
   });
 
-  this.CategorySlider = document.querySelector(".category-slider");
+  this.sections = document.querySelectorAll(".bg-fade");
+  this.bodyTag = document.querySelector("body");
 
-  if (this.CategorySlider) {
-    this.initCategorySlider();
+  if (this.sections) {
+    this.addMovement();
+    document.addEventListener("scroll", this.addMovement);
+    window.addEventListener("resize", this.addMovement);
   }
 }
 /**
@@ -74,37 +86,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var ClassesBg = /*#__PURE__*/_createClass(function ClassesBg() {
-  var _this = this;
+var CategorySlider = /*#__PURE__*/_createClass(function CategorySlider() {
+  _classCallCheck(this, CategorySlider);
 
-  _classCallCheck(this, ClassesBg);
-
-  _defineProperty(this, "addMovement", function () {
-    var topViewport = window.pageYOffset;
-    var midViewport = topViewport + window.innerHeight / 2; // lets find the middle of each section
-    // (section, index) => {}
-
-    _this.sections.forEach(function (section, index) {
-      var topSection = section.offsetTop;
-      var midSection = topSection + section.offsetHeight / 4; // how far away is the section from the visible area of the page
-
-      var distanceToSection = midViewport - midSection;
-      console.log(distanceToSection); // check the background
-
-      if (distanceToSection > -100) {
-        var dataBackground = section.getAttribute("data-background");
-        _this.bodyTag.style.backgroundColor = dataBackground;
+  _defineProperty(this, "initCategorySlider", function () {
+    var swiper = new Swiper(".category-slider", {
+      slidesPerView: 1,
+      effect: "fade",
+      centeredSlides: false,
+      navigation: {
+        nextEl: ".category-slider-button-next",
+        prevEl: ".category-slider-button-prev"
       }
     });
   });
 
-  this.sections = document.querySelectorAll(".bg-fade");
-  this.bodyTag = document.querySelector("body");
+  this.CategorySlider = document.querySelector(".category-slider");
 
-  if (this.sections) {
-    this.addMovement();
-    document.addEventListener("scroll", this.addMovement);
-    window.addEventListener("resize", this.addMovement);
+  if (this.CategorySlider) {
+    this.initCategorySlider();
   }
 }
 /**

@@ -8,6 +8,53 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+var ClassesBg = /*#__PURE__*/_createClass(function ClassesBg() {
+  var _this = this;
+
+  _classCallCheck(this, ClassesBg);
+
+  _defineProperty(this, "addMovement", function () {
+    var topViewport = window.pageYOffset;
+    var midViewport = topViewport + window.innerHeight / 2; // lets find the middle of each section
+    // (section, index) => {}
+
+    _this.sections.forEach(function (section, index) {
+      var topSection = section.offsetTop;
+      var midSection = topSection + section.offsetHeight / 6; // how far away is the section from the visible area of the page
+
+      var distanceToSection = midViewport - midSection;
+      console.log(distanceToSection); // check the background
+
+      if (distanceToSection > -100) {
+        var dataBackground = section.getAttribute("data-background");
+        _this.bodyTag.style.backgroundColor = dataBackground;
+      }
+    });
+  });
+
+  this.sections = document.querySelectorAll(".bg-fade");
+  this.bodyTag = document.querySelector("body");
+
+  if (this.sections) {
+    this.addMovement();
+    document.addEventListener("scroll", this.addMovement);
+    window.addEventListener("resize", this.addMovement);
+  }
+}
+/**
+ * @desc Gallery Slider
+ */
+);
+"use strict";
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var CategorySlider = /*#__PURE__*/_createClass(function CategorySlider() {
   _classCallCheck(this, CategorySlider);
 
@@ -27,53 +74,6 @@ var CategorySlider = /*#__PURE__*/_createClass(function CategorySlider() {
 
   if (this.CategorySlider) {
     this.initCategorySlider();
-  }
-}
-/**
- * @desc Gallery Slider
- */
-);
-"use strict";
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var ClassesBg = /*#__PURE__*/_createClass(function ClassesBg() {
-  var _this = this;
-
-  _classCallCheck(this, ClassesBg);
-
-  _defineProperty(this, "addMovement", function () {
-    var topViewport = window.pageYOffset;
-    var midViewport = topViewport + window.innerHeight / 2; // lets find the middle of each section
-    // (section, index) => {}
-
-    _this.sections.forEach(function (section, index) {
-      var topSection = section.offsetTop;
-      var midSection = topSection + section.offsetHeight / 8; // how far away is the section from the visible area of the page
-
-      var distanceToSection = midViewport - midSection;
-      console.log(distanceToSection); // check the background
-
-      if (distanceToSection > -100) {
-        var dataBackground = section.getAttribute("data-background");
-        _this.bodyTag.style.backgroundColor = dataBackground;
-      }
-    });
-  });
-
-  this.sections = document.querySelectorAll(".bg-fade");
-  this.bodyTag = document.querySelector("body");
-
-  if (this.sections) {
-    this.addMovement();
-    document.addEventListener("scroll", this.addMovement);
-    window.addEventListener("resize", this.addMovement);
   }
 }
 /**
@@ -197,6 +197,7 @@ var ImageGallery = /*#__PURE__*/_createClass(function ImageGallery() {
  */
 );
 "use strict";
+"use strict";
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
@@ -228,7 +229,6 @@ var Navbar = /*#__PURE__*/_createClass(function Navbar() {
  * @desc navbar
  */
 );
-"use strict";
 "use strict";
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }

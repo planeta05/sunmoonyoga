@@ -23,7 +23,7 @@ class ClassesBg {
         // (section, index) => {}
         this.sections.forEach((section, index) => {
             const topSection = section.offsetTop
-            const midSection = topSection + (section.offsetHeight / 8)
+            const midSection = topSection + (section.offsetHeight / 6)
 
             // how far away is the section from the visible area of the page
             const distanceToSection = midViewport - midSection

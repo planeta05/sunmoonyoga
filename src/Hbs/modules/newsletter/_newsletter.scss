@@ -2,6 +2,10 @@
   padding: 260px 0 140px;
   position: relative;
 
+  @media (max-width: 600px) {
+    margin-bottom: 300px;
+  }
+
   h2, h3, h4, p {
     color: $color-white;
   }

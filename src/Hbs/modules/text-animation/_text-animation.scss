@@ -1,0 +1,84 @@
+.text-animation {
+  text-align: center;
+  padding: 200px 50px;
+  position: relative;
+
+  .animated {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    width: 100%;
+
+    &.one {
+      animation-name: textanimationone;
+    }
+
+    &.two {
+      animation-name: textanimationtwo;
+    }
+  }
+
+  @keyframes textanimationone {
+    from {
+      opacity: 1;
+      top: 50%;
+    }
+
+    25% {
+      opacity: 1;
+      top: 50%;
+    }
+
+    50% {
+      opacity: 0;
+      top: 30%;
+    }
+
+    80% {
+      opacity: 0;
+      top: 50%;
+    }
+
+    to {
+      opacity: 1;
+      top: 50%;
+    }
+  }
+
+  @keyframes textanimationtwo {
+    from {
+      opacity: 0;
+      top: 50%;
+    }
+
+    30% {
+      opacity: 0;
+      top: 50%;
+    }
+
+    50% {
+      opacity: 1;
+      top: 50%;
+    }
+
+    75% {
+      opacity: 1;
+      top: 50%;
+    }
+
+    to {
+      opacity: 0;
+      top: 30%;
+    }
+  }
+
+  h4 {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 80px;
+  }
+}

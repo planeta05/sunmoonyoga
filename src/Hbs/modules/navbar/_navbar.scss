@@ -42,14 +42,14 @@ header {
 
 		nav {
 			position: fixed;
-			right: -540px;
+			right: -100%;
 			top: 0;
 			height: 100%;
-			background-color: #3D4526;
+			background-color: #fff;
 			padding: 80px 120px;
-			max-width: 540px;
+			width: 100%;
 			z-index: 100;
-			transition: .6s ease;
+			transition: 1s ease;
 			align-items: center;
 			display: flex;
 			flex-direction: column;
@@ -57,8 +57,6 @@ header {
 
 			@media (max-width: 768px) {
 				padding: 80px 20px;
-				width: 100%;
-				right: -100vw;
 			}
 
 			.logo {
@@ -102,10 +100,18 @@ header {
 
 			.close-nav {
 				position: absolute;
-				left: -120px;
-				top: 110px;
+				right: 165px;
+				top: 65px;
 				opacity: 0;
 				transition: 0.25s ease;
+				z-index: 100;
+				color: $color-black;
+				font-size: 24px;
+				font-family: $font-family-circular-bold;
+
+				&:hover {
+					text-decoration: none;
+				}
 
 				@media (max-width: 768px) {
 					left: unset;
@@ -123,20 +129,16 @@ header {
 			}
 
 			&.open {
-				transform: translateX(-540px);
-
-				@media (max-width: 768px) {
-					transform: translateX(-100vw);
-				}
+				transform: translateX(-100%);
 
 				ul {
 					opacity: 1;
-					transition: 0.25s ease .45s;
+					transition: 0.25s ease 1s;
 				}
 
 				.close-nav {
 					opacity: 1;
-					transition: 0.25s ease .45s;
+					transition: 0.25s ease 1s;
 				}
 			}
 		}

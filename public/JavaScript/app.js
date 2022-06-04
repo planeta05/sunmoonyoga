@@ -43,37 +43,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var ContactForm = /*#__PURE__*/_createClass(function ContactForm() {
-  _classCallCheck(this, ContactForm);
-
-  _defineProperty(this, "handleFocus", function () {
-    var formTag = document.querySelectorAll("div.form-group");
-    var focusTag = document.querySelectorAll(".focus-toggle");
-    focusTag.addEventListener("click", function () {
-      formTag.classList.toggle("show-focus");
-    });
-  });
-
-  this.form = document.querySelector(".focus-handler");
-
-  if (this.form) {
-    this.handleFocus();
-  }
-}
-/**
- * @desc navbar
- */
-);
-"use strict";
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var ClassesBg = /*#__PURE__*/_createClass(function ClassesBg() {
   var _this = this;
 
@@ -88,23 +57,44 @@ var ClassesBg = /*#__PURE__*/_createClass(function ClassesBg() {
       var topSection = section.offsetTop;
       var midSection = topSection + section.offsetHeight / 6; // how far away is the section from the visible area of the page
 
-      var distanceToSection = midViewport - midSection;
-      console.log(distanceToSection); // check the background
+      var distanceToSection = midViewport - midSection; // check the background
 
       if (distanceToSection > -100) {
-        var dataBackground = section.getAttribute("data-background");
+        var dataBackground = section.getAttribute('data-background');
         _this.bodyTag.style.backgroundColor = dataBackground;
       }
     });
   });
 
-  this.sections = document.querySelectorAll(".bg-fade");
-  this.bodyTag = document.querySelector("body");
+  _defineProperty(this, "addVideoMovement", function () {
+    var topViewport = window.pageYOffset;
+    var midViewport = topViewport + window.innerHeight / 2;
+
+    var topVideo = _this.videoBg.getBoundingClientRect().top;
+
+    var midVideo = topVideo + _this.videoBg.offsetHeight / 6;
+    var distanceToVideo = midViewport - midVideo;
+    console.log(distanceToVideo);
+
+    if (distanceToVideo > 200) {
+      _this.videoBg.style.opacity = 1;
+    }
+  });
+
+  this.sections = document.querySelectorAll('.bg-fade');
+  this.bodyTag = document.querySelector('body');
+  this.videoBg = document.querySelector('.video-bg.desktop');
 
   if (this.sections) {
     this.addMovement();
-    document.addEventListener("scroll", this.addMovement);
-    window.addEventListener("resize", this.addMovement);
+    document.addEventListener('scroll', this.addMovement);
+    window.addEventListener('resize', this.addMovement);
+  }
+
+  if (this.videoBg) {
+    this.addVideoMovement();
+    document.addEventListener('scroll', this.addVideoMovement);
+    window.addEventListener('resize', this.addVideoMovement);
   }
 }
 /**
@@ -121,22 +111,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var Navbar = /*#__PURE__*/_createClass(function Navbar() {
-  _classCallCheck(this, Navbar);
+var ContactForm = /*#__PURE__*/_createClass(function ContactForm() {
+  _classCallCheck(this, ContactForm);
 
-  _defineProperty(this, "initNavbarToggle", function () {
-    document.addEventListener("click", function (event) {
-      if (event.target.closest("[data-js='navbar-toggler']")) {
-        event.preventDefault();
-        document.body.classList.toggle("navbar--open");
-      }
-    }, false);
+  _defineProperty(this, "handleFocus", function () {
+    var formTag = document.querySelectorAll("div.form-group");
+    var focusTag = document.querySelectorAll(".focus-toggle");
+    focusTag.addEventListener("click", function () {
+      formTag.classList.toggle("show-focus");
+    });
   });
 
-  this.navbar = document.querySelector("[data-js='navbar']");
+  this.form = document.querySelector(".focus-handler");
 
-  if (this.navbar) {
-    this.initNavbarToggle();
+  if (this.form) {
+    this.handleFocus();
   }
 }
 /**
@@ -192,8 +181,7 @@ var ImageGallery = /*#__PURE__*/_createClass(function ImageGallery() {
   _classCallCheck(this, ImageGallery);
 
   _defineProperty(this, "initImageGallery", function () {
-    console.log('image-gallery started');
-    var swiper = new Swiper(".image-gallery-thumbs.swiper", {
+    var swiper = new Swiper('.image-gallery-thumbs.swiper', {
       loop: true,
       spaceBetween: 10,
       slidesPerView: 2.5,
@@ -205,12 +193,12 @@ var ImageGallery = /*#__PURE__*/_createClass(function ImageGallery() {
         }
       }
     });
-    var swiper2 = new Swiper(".image-gallery.swiper", {
+    var swiper2 = new Swiper('.image-gallery.swiper', {
       loop: true,
       spaceBetween: 10,
       navigation: {
-        nextEl: ".swiper-gallery-button-next",
-        prevEl: ".swiper-gallery-button-prev"
+        nextEl: '.swiper-gallery-button-next',
+        prevEl: '.swiper-gallery-button-prev'
       },
       thumbs: {
         swiper: swiper
@@ -218,7 +206,7 @@ var ImageGallery = /*#__PURE__*/_createClass(function ImageGallery() {
     });
   });
 
-  this.imageGalllery = document.querySelector(".image-gallery.swiper");
+  this.imageGalllery = document.querySelector('.image-gallery.swiper');
 
   if (this.imageGalllery) {
     this.initImageGallery();
@@ -226,6 +214,38 @@ var ImageGallery = /*#__PURE__*/_createClass(function ImageGallery() {
 }
 /**
  * @desc Gallery Slider
+ */
+);
+"use strict";
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var Navbar = /*#__PURE__*/_createClass(function Navbar() {
+  _classCallCheck(this, Navbar);
+
+  _defineProperty(this, "initNavbarToggle", function () {
+    document.addEventListener("click", function (event) {
+      if (event.target.closest("[data-js='navbar-toggler']")) {
+        event.preventDefault();
+        document.body.classList.toggle("navbar--open");
+      }
+    }, false);
+  });
+
+  this.navbar = document.querySelector("[data-js='navbar']");
+
+  if (this.navbar) {
+    this.initNavbarToggle();
+  }
+}
+/**
+ * @desc navbar
  */
 );
 "use strict";
@@ -653,55 +673,55 @@ var App = /*#__PURE__*/_createClass(function App() {
 new App();
 /* Form underline */
 
-var focusToggle = document.querySelectorAll(".focus-toggle");
-var focusHolder = document.querySelector(".form-group");
+var focusToggle = document.querySelectorAll('.focus-toggle');
+var focusHolder = document.querySelector('.form-group');
 focusToggle.forEach(function (pustekuchen) {
   pustekuchen.addEventListener('focus', function (event) {
-    event.target.parentElement.classList.add("show-focus");
+    event.target.parentElement.classList.add('show-focus');
   });
   pustekuchen.addEventListener('blur', function (event) {
-    event.target.parentElement.classList.remove("show-focus");
+    event.target.parentElement.classList.remove('show-focus');
   });
 });
 /*
  * navigation
  */
 
-var navOpen = document.querySelector("a.nav-toggle");
-var navClose = document.querySelector("a.close-nav");
-var navTag = document.querySelector("nav");
-var navBackdropTag = document.querySelector(".nav-backdrop");
-var htmlTag = document.querySelector("html");
-var navLinks = navTag.querySelectorAll("a");
-var headerTag = document.querySelector("header .container"); // Open Nav and backdrop control
+var navOpen = document.querySelector('a.nav-toggle');
+var navClose = document.querySelector('a.close-nav');
+var navTag = document.querySelector('nav');
+var navBackdropTag = document.querySelector('.nav-backdrop');
+var htmlTag = document.querySelector('html');
+var navLinks = navTag.querySelectorAll('a');
+var headerTag = document.querySelector('header .container'); // Open Nav and backdrop control
 
-navOpen.addEventListener("click", function () {
-  navTag.classList.add("open");
-  navBackdropTag.classList.add("show");
-  htmlTag.classList.add("fixed");
+navOpen.addEventListener('click', function () {
+  navTag.classList.add('open');
+  navBackdropTag.classList.add('show');
+  htmlTag.classList.add('fixed');
 }); // Close Nav
 
-navClose.addEventListener("click", function () {
-  navTag.classList.remove("open");
-  navBackdropTag.classList.remove("show");
-  htmlTag.classList.remove("fixed");
+navClose.addEventListener('click', function () {
+  navTag.classList.remove('open');
+  navBackdropTag.classList.remove('show');
+  htmlTag.classList.remove('fixed');
 }); // Close Nav when a link is clicked
 
 navLinks.forEach(function (navLink) {
-  navLink.addEventListener("click", function () {
-    navTag.classList.remove("open");
-    navBackdropTag.classList.remove("show");
-    htmlTag.classList.remove("fixed");
+  navLink.addEventListener('click', function () {
+    navTag.classList.remove('open');
+    navBackdropTag.classList.remove('show');
+    htmlTag.classList.remove('fixed');
   });
 }); // when we scroll the page, at a certain point
 // toggle a class to the header
 
-document.addEventListener("scroll", function () {
+document.addEventListener('scroll', function () {
   var pixels = window.pageYOffset;
 
   if (pixels > 200) {
-    headerTag.classList.add("scrolled");
+    headerTag.classList.add('scrolled');
   } else {
-    headerTag.classList.remove("scrolled");
+    headerTag.classList.remove('scrolled');
   }
 });

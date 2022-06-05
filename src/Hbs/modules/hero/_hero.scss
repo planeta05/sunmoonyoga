@@ -62,7 +62,7 @@
       }
 
       .hero-img {
-        border-radius: 400px 200px;
+        border-radius: $border-radius-sm;
         width: auto;
         max-height: 80vh;
         max-width: calc(100% - 60px);

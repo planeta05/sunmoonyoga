@@ -7,14 +7,14 @@
     .container {
       display: flex;
 
-      @media (max-width: 600px) {
+      @media (max-width: 990px) {
         flex-direction: column;
       }
 
       &.reverse {
         flex-direction: row-reverse;
 
-        @media (max-width: 600px) {
+        @media (max-width: 990px) {
           flex-direction: column;
         }
 
@@ -25,10 +25,31 @@
           @media (max-width: 1100px) {
             margin-right: 80px;
           }
+
+          @media (max-width: 990px) {
+            margin-top: -50px;
+            margin-right: -120px;
+          }
+
+          @media (max-width: 768px) {
+            margin-top: -80px;
+            margin-right: -60px;
+          }
+
+          @media (max-width: 600px) {
+            margin-top: -120px;
+            margin-right: -60px;
+          }
         }
       }
 
       .description {
+
+        .head {
+          @media (max-width: 990px) {
+            max-width: 500px;
+          }
+        }
 
         h2, h4, p, h6 {
           color: $color-white;
@@ -75,13 +96,26 @@
           margin-left: 80px;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 990px) {
           margin-left: 0;
-          margin-top: 40px;
+          display: flex;
+          justify-content: flex-end;
+          margin-top: -50px;
+          margin-right: -120px;
+        }
+
+        @media (max-width: 768px) {
+          margin-top: -80px;
+          margin-right: -60px;
+        }
+
+        @media (max-width: 600px) {
+          margin-top: -120px;
+          margin-right: -60px;
         }
 
         .photo {
-          border-radius: 26vw 12vw;
+          border-radius: $border-radius-sm;
           max-width: 350px;
           height: auto;
 
@@ -90,8 +124,9 @@
             height: auto;
           }
 
-          @media (max-width: 600px) {
-            border-radius: 300px 150px;
+          @media (max-width: 450px) {
+            width: 220px;
+            height: auto;
           }
         }
 

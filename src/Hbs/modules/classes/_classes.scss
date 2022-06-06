@@ -160,18 +160,26 @@
         width: 300px;
         height: auto;
         bottom: -20px;
+
+        left: unset;
+        right: 50px;
       }
 
       &.vinyasa .icon {
           width: 260px;
           height: auto;
           bottom: 40px;
+
+          left: unset;
+        right: 50px;
       }
 
       &.hatha .icon {
         width: 100px;
         height: auto;
         bottom: -40px;
+
+        right: 50px;
       }
     }
   }

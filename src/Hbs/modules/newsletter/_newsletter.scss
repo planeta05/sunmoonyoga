@@ -1,5 +1,5 @@
 .newsletter {
-  padding: 260px 0 140px;
+  padding: 60px 0 140px;
   position: relative;
 
   @media (max-width: 600px) {
@@ -23,6 +23,13 @@
       margin-left: -10px;
       font-size: 30vw;
       line-height: 28vw;
+    }
+  }
+
+  h3 {
+
+    @media (min-width: 990px) and (max-width: 1400px) {
+      width: calc(100% + 200px);
     }
   }
   
@@ -58,6 +65,7 @@
     }
 
     .text {
+
       h4 {
         margin-left: 90px;
         margin-top: 60px;
@@ -69,6 +77,11 @@
           margin-bottom: 120px;
         }
       }
+    }
+
+    .jotform {
+      width: 520px;
+      flex-shrink: 0;
     }
 
     form {

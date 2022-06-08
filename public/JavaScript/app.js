@@ -8,6 +8,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+var CategorySlider = /*#__PURE__*/_createClass(function CategorySlider() {
+  _classCallCheck(this, CategorySlider);
+
+  _defineProperty(this, "initCategorySlider", function () {
+    var swiper = new Swiper(".category-slider", {
+      slidesPerView: 1,
+      effect: "fade",
+      centeredSlides: false,
+      navigation: {
+        nextEl: ".category-slider-button-next",
+        prevEl: ".category-slider-button-prev"
+      }
+    });
+  });
+
+  this.CategorySlider = document.querySelector(".category-slider");
+
+  if (this.CategorySlider) {
+    this.initCategorySlider();
+  }
+}
+/**
+ * @desc Gallery Slider
+ */
+);
+"use strict";
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var ClassesBg = /*#__PURE__*/_createClass(function ClassesBg() {
   var _this = this;
 
@@ -76,41 +111,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var CategorySlider = /*#__PURE__*/_createClass(function CategorySlider() {
-  _classCallCheck(this, CategorySlider);
-
-  _defineProperty(this, "initCategorySlider", function () {
-    var swiper = new Swiper(".category-slider", {
-      slidesPerView: 1,
-      effect: "fade",
-      centeredSlides: false,
-      navigation: {
-        nextEl: ".category-slider-button-next",
-        prevEl: ".category-slider-button-prev"
-      }
-    });
-  });
-
-  this.CategorySlider = document.querySelector(".category-slider");
-
-  if (this.CategorySlider) {
-    this.initCategorySlider();
-  }
-}
-/**
- * @desc Gallery Slider
- */
-);
-"use strict";
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var ContactForm = /*#__PURE__*/_createClass(function ContactForm() {
   _classCallCheck(this, ContactForm);
 
@@ -130,41 +130,6 @@ var ContactForm = /*#__PURE__*/_createClass(function ContactForm() {
 }
 /**
  * @desc navbar
- */
-);
-"use strict";
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var SliderHero = /*#__PURE__*/_createClass(function SliderHero() {
-  _classCallCheck(this, SliderHero);
-
-  _defineProperty(this, "initSliderHero", function () {
-    var heroSwiper = new Swiper(".hero-slider .swiper", {
-      slidesPerView: 1,
-      loop: true,
-      effect: "fade",
-      navigation: {
-        nextEl: ".swiper-hero-button-next",
-        prevEl: ".swiper-hero-button-prev"
-      }
-    });
-  });
-
-  this.sliderHero = document.querySelector(".hero-slider .swiper");
-
-  if (this.sliderHero) {
-    this.initSliderHero();
-  }
-}
-/**
- * @desc Gallery Slider
  */
 );
 "use strict";
@@ -210,6 +175,41 @@ var ImageGallery = /*#__PURE__*/_createClass(function ImageGallery() {
 
   if (this.imageGalllery) {
     this.initImageGallery();
+  }
+}
+/**
+ * @desc Gallery Slider
+ */
+);
+"use strict";
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var SliderHero = /*#__PURE__*/_createClass(function SliderHero() {
+  _classCallCheck(this, SliderHero);
+
+  _defineProperty(this, "initSliderHero", function () {
+    var heroSwiper = new Swiper(".hero-slider .swiper", {
+      slidesPerView: 1,
+      loop: true,
+      effect: "fade",
+      navigation: {
+        nextEl: ".swiper-hero-button-next",
+        prevEl: ".swiper-hero-button-prev"
+      }
+    });
+  });
+
+  this.sliderHero = document.querySelector(".hero-slider .swiper");
+
+  if (this.sliderHero) {
+    this.initSliderHero();
   }
 }
 /**

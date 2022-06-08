@@ -68,10 +68,9 @@ p, li {
 	color: $color-black;
 
 	a {
-		font-family: $font-family-circular-regular;
+		font-family: $font-family-circular-bold;
 		color: $color-black;
 		position: relative;
-		border-bottom: 4px solid $color-tertiary;
 		transition: 0.25s ease;
 
 		&:hover {

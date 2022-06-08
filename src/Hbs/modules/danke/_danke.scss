@@ -1,0 +1,51 @@
+.start-animation {
+  width: 100vw;
+  height: 100vh;
+  background-color: #CAC1E0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  video {
+    width: 30%;
+    height: auto;
+
+    @media (max-width: 990px) {
+      width: 60%;
+    }
+  }
+
+  .content {
+    text-align: center;
+    padding: 0 40px;
+
+    h2, h4 {
+      color: #fff;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      margin-top: 50px;
+    }
+
+    .links {
+      margin-top: 70px;
+      margin-bottom: 100px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 40px;
+      }
+
+      a {
+        color: $color-tertiary;
+        padding: 20px;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="de-DE">
+<head>
+    <title>
+            sun moon YOGA
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="Css/main.min.css">
+    
+</head>
+<body>
+
+<header>
+    <header>
+        <div class="container">
+            <a class="logo-link" href="#">
+                <img src="./Images/logo.svg">
+            </a>
+            <a class="nav-toggle btn" href="#/">m</a>
+            <nav>
+                <img class="logo" src="./Images/logo_schriftzug-unten_schwarz.svg">
+                <ul>
+                    <li><a href="#sec-classes"><h3>classes</h3></a></li>
+                    <li><a href="#test"><h3>mein yogaweg</h3></a></li>
+                    <li><a href="#"><h3>faq</h3></a></li>
+                    <li><a href="#"><h3>studio</h3></a></li>
+                </ul>
+    
+                <a class="close-nav btn-round btn-round-small" href="#/">x</a>
+            </nav>
+    
+            <div class="nav-backdrop"></div>
+        </div>
+    </header></header>
+
+<main class="">
+    
+        <div class="start-animation">
+            <video autoplay muted loop class="">
+                <source src="./Images/insta-gif.mp4" type="video/mp4">
+            </video>
+            <div class="content">
+                <h2>Wie schön, dass du dabei bist!</h2>
+                <h4>Ich melde mich bei dir, sobald es los geht.</h4>
+        
+                <div class="links">
+                    <p>
+                        <a href="https://www.sunmoon-yoga.de/">Zurück zur Website</a>
+                        <!--<a href="https://www.instagram.com/sunmoon.yoga/?hl=de">Zu Instagram</a>-->
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="stamps">
+        </div>
+        -->
+
+</main>
+
+<footer class="bg-fade" data-background="#fff">
+    <div class="container">
+        <div class="content">
+            <img class="logo" src="./Images/logo.svg">
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Impressum</a>
+                        <a href="#">Datenschutz</a>
+                        <a href="#">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+    <script src="JavaScript/bundle.js"></script>
+    <script src="JavaScript/app.js"></script>
+</body>
+</html>
+
+<div class="cursor-dot-outline"></div>
+<div class="cursor-dot"></div>
+
+<script>
+    // CUSROS
+    var cursor = {
+        delay: 8,
+        _x: 0,
+        _y: 0,
+        endX: (window.innerWidth / 2),
+        endY: (window.innerHeight / 2),
+        cursorVisible: true,
+        cursorEnlarged: false,
+        $dot: document.querySelector('.cursor-dot'),
+        $outline: document.querySelector('.cursor-dot-outline'),
+
+        init: function() {
+            // Set up element sizes
+            this.dotSize = this.$dot.offsetWidth;
+            this.outlineSize = this.$outline.offsetWidth;
+
+            this.setupEventListeners();
+            this.animateDotOutline();
+        },
+
+        setupEventListeners: function() {
+            var self = this;
+
+            // Anchor hovering
+            document.querySelectorAll(['a', 'button']).forEach(function(el) {
+                el.addEventListener('mouseover', function() {
+                    self.cursorEnlarged = true;
+                    self.toggleCursorSize();
+                });
+                el.addEventListener('mouseout', function() {
+                    self.cursorEnlarged = false;
+                    self.toggleCursorSize();
+                });
+            });
+
+            // Click events
+            document.addEventListener('mousedown', function() {
+                self.cursorEnlarged = true;
+                self.toggleCursorSize();
+            });
+            document.addEventListener('mouseup', function() {
+                self.cursorEnlarged = false;
+                self.toggleCursorSize();
+            });
+
+
+            document.addEventListener('mousemove', function(e) {
+                // Show the cursor
+                self.cursorVisible = true;
+                self.toggleCursorVisibility();
+
+                // Position the dot
+                self.endX = e.pageX;
+                self.endY = e.pageY;
+                self.$dot.style.top = self.endY + 'px';
+                self.$dot.style.left = self.endX + 'px';
+            });
+
+            // Hide/show cursor
+            document.addEventListener('mouseenter', function(e) {
+                self.cursorVisible = true;
+                self.toggleCursorVisibility();
+                self.$dot.style.opacity = 1;
+                self.$outline.style.opacity = 1;
+            });
+
+            document.addEventListener('mouseleave', function(e) {
+                self.cursorVisible = true;
+                self.toggleCursorVisibility();
+                self.$dot.style.opacity = 0;
+                self.$outline.style.opacity = 0;
+            });
+        },
+
+        animateDotOutline: function() {
+            var self = this;
+
+            self._x += (self.endX - self._x) / self.delay;
+            self._y += (self.endY - self._y) / self.delay;
+            self.$outline.style.top = self._y + 'px';
+            self.$outline.style.left = self._x + 'px';
+
+            requestAnimationFrame(this.animateDotOutline.bind(self));
+        },
+
+        toggleCursorSize: function() {
+            var self = this;
+
+            if (self.cursorEnlarged) {
+                self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
+                self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            } else {
+                self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
+                self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
+            }
+        },
+
+        toggleCursorVisibility: function() {
+            var self = this;
+
+            if (self.cursorVisible) {
+                self.$dot.style.opacity = 1;
+                self.$outline.style.opacity = 1;
+            } else {
+                self.$dot.style.opacity = 0;
+                self.$outline.style.opacity = 0;
+            }
+        }
+    }
+
+    cursor.init();
+
+    // STAMPS
+    let number = 0
+    const stamps = [
+        "./Images/stamp-01.svg",
+        "./Images/stamp-02.svg",
+        "./Images/stamp-03.svg",
+        "./Images/stamp-04.svg",
+        "./Images/stamp-05.svg",
+        "./Images/stamp-06.svg",
+        "./Images/stamp-07.svg"
+    ]
+
+    const stampsTag = document.querySelector("div.stamps")
+
+    const addStamp = function (x, y) {
+        // <img src="circles.svg">
+        const img = document.createElement("img")
+        img.setAttribute("src", stamps[number])
+
+        // remove half the window width
+        img.style.left = (x - window.innerWidth / 2) + "px"
+        img.style.top = y + "px"
+
+        stampsTag.appendChild(img)
+
+        number = number + 1
+        if (number > stamps.length - 1) {
+            number = 0
+        }
+    }
+
+    document.addEventListener("click", function (event) {
+        addStamp(event.pageX, event.pageY)
+    })
+
+
+</script>

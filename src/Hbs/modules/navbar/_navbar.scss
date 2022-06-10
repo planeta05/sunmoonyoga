@@ -60,7 +60,7 @@ header {
 			}
 
 			.logo {
-				width: 140px;
+				width: 100px;
 				height: auto;
 			}
 
@@ -69,6 +69,11 @@ header {
 				text-align: center;
 				opacity: 0;
 				transition: 0.25s ease;
+				margin-bottom: 6vh;
+
+				@media (max-width: 375px) {
+					margin-bottom: 2vh;
+				}
 
 				li {
 					list-style-type: none;

@@ -1,87 +1,33 @@
-<!doctype html>
-<html lang="de-DE">
-<head>
-    <title>
-            sun moon YOGA
-    </title>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="Css/main.min.css">
-    
-</head>
-<body>
+{{#> layouts/clean title="sun moon YOGA" home="true"}}
 
-<header>
-    <header>
-        <div class="container">
-            <a class="logo-link" href="#">
-                <img src="./Images/logo.svg">
-            </a>
-            <a class="nav-toggle btn" href="#/">m</a>
-            <nav>
-                <img class="logo" src="./Images/logo_schriftzug-unten_schwarz.svg">
-                <ul>
-                    <li><a href="#sec-about"><h3>mein fokus</h3></a></li>
-                    <li><a href="#sec-classes"><h3>classes</h3></a></li>
-                    <li><a href="#sec-nl"><h3>sei dabei</h3></a></li>
-                    <li><a href="https://www.sunmoon-yoga.de/kontakt.html"><h3>kontakt</h3></a></li>
-                </ul>
-    
-                <a class="close-nav btn-round btn-round-small" href="#/">x</a>
-            </nav>
-    
-            <div class="nav-backdrop"></div>
-        </div>
-    </header></header>
+    {{#*inline "content-block"}}
 
-<main class="">
-    
-        <div class="start-animation">
-            <video autoplay playsinline muted loop class="">
-                <source src="./Images/insta-gif.mp4" type="video/mp4">
-            </video>
+        <section class="contact">
             <div class="content">
-                <h2>Wie schön, dass du dabei bist!</h2>
-                <h4>Ich melde mich bei dir, sobald es los geht.</h4>
-        
-                <div class="links">
-                    <p>
-                        <a href="https://www.sunmoon-yoga.de/">Zurück zur Website</a>
-                        <!--<a href="https://www.instagram.com/sunmoon.yoga/?hl=de">Zu Instagram</a>-->
-                    </p>
-                </div>
+                <h3>Impressum</h3>
+                <h4>Angaben gem&auml;&szlig; &sect; 5 TMG</h4>
+                <p>
+                <p>Milena Planeta<br />
+                    Corneliastr 9<br />
+                    45130 Essen</p>
+
+                <h6>Kontakt</h6>
+                <p>Telefon: 015780943723<br />
+                    E-Mail: milena.friedhoff@gmail.com</p>
+
+                <p>Quelle: <a href="https://www.e-recht24.de">eRecht24</a></p>
+                </p>
             </div>
-        </div>
-        <!--
-        <div class="stamps">
-        </div>
-        -->
+            <div class="sub-content">
+                <p>
+                    <a href="https://www.sunmoon-yoga.de/">Zurück zur Website</a>
+                </p>
+            </div>
+        </section>
 
-</main>
+    {{/inline}}
 
-<footer class="bg-fade" data-background="#fff">
-    <div class="container">
-        <div class="content">
-            <img class="logo" src="./Images/logo.svg">
-
-            <nav>
-                <ul>
-                    <li>
-                        <a href="https://www.sunmoon-yoga.de/impressum.html">Impressum</a>
-                        <a href="https://www.sunmoon-yoga.de/datenschutz.html">Datenschutz</a>
-                        <a href="https://www.sunmoon-yoga.de/kontakt.html">Kontakt</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</footer>
-
-    <script src="JavaScript/bundle.js"></script>
-    <script src="JavaScript/app.js"></script>
-</body>
-</html>
+{{/layouts/clean}}
 
 <div class="cursor-dot-outline"></div>
 <div class="cursor-dot"></div>

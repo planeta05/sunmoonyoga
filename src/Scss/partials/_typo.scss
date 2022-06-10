@@ -58,6 +58,14 @@ h6 {
 	@media (max-width: 768px) {
 		@include font-rem(20px, 30px);
 	}
+
+	&.small {
+		font-family: $font-family-circular-regular;
+		color: $color-black;
+		@include font-rem(14px, 18px);
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
 }
 
 p, li {
@@ -92,26 +100,15 @@ strong {
 }
 
 ul {
-	padding-left: 60px;
 
 	li {
 		color: $color-black;
 		font-family: $font-family-circular-bold;
-		list-style-type: none;
+		list-style-type: circle;
 		position: relative;
 		line-height: 26px;
 		margin-bottom: 28px;
-
-		&::before {
-			content: "";
-			background-image: url("../Images/bullet.svg");
-			width: 30px;
-			height: 30px;
-			background-size: contain;
-			position: absolute;
-			left: -64px;
-			top: 0;
-		}
+		margin-top: 30px;
 	}
 }
 

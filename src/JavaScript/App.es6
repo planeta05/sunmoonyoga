@@ -1,9 +1,5 @@
 class App {
   constructor() {
-    new Navbar()
-    new SliderHero()
-    new CategorySlider()
-    new ImageGallery()
     new ClassesBg()
 
     if (document.querySelector('.form-row')) {
@@ -14,18 +10,6 @@ class App {
 
 new App()
 
-/* Form underline */
-const focusToggle = document.querySelectorAll('.focus-toggle')
-const focusHolder = document.querySelector('.form-group')
-
-focusToggle.forEach((pustekuchen) => {
-  pustekuchen.addEventListener('focus', (event) => {
-    event.target.parentElement.classList.add('show-focus')
-  })
-  pustekuchen.addEventListener('blur', (event) => {
-    event.target.parentElement.classList.remove('show-focus')
-  })
-})
 
 /*
  * navigation

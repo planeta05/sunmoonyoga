@@ -42,8 +42,9 @@ header {
 
 		nav {
 			position: fixed;
-			right: -100%;
+			opacity: 0;
 			top: 0;
+			left: 0;
 			height: 100%;
 			background-color: #fff;
 			padding: 80px 120px;
@@ -54,6 +55,7 @@ header {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			pointer-events: none;
 
 			@media (max-width: 768px) {
 				padding: 80px 20px;
@@ -77,6 +79,11 @@ header {
 
 				li {
 					list-style-type: none;
+
+					@media (max-width: 768px) {
+						margin-top: 10px;
+						margin-bottom: 16px;
+					}
 
 					@media (max-width: 768px) {
 						margin-bottom: 15px;
@@ -134,11 +141,12 @@ header {
 			}
 
 			&.open {
-				transform: translateX(-100%);
+				opacity: 1;
+				pointer-events: auto;
 
 				ul {
 					opacity: 1;
-					transition: 0.25s ease 1s;
+					transition: 0.5s ease .5s;
 				}
 
 				.close-nav {

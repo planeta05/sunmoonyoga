@@ -20,6 +20,7 @@
             </a>
             <a class="nav-toggle btn" href="#/">m</a>
             <nav>
+                <a class="close-nav btn-round btn-round-small" href="#/">x</a>
                 <img class="logo" src="./Images/logo_schriftzug-unten_schwarz.svg">
                 <ul>
                     <li><a href="https://www.sunmoon-yoga.de/#sec-about"><h3>mein fokus</h3></a></li>
@@ -27,7 +28,6 @@
                     <li><a href="https://www.sunmoon-yoga.de/#sec-nl"><h3>sei dabei</h3></a></li>
                     <li><a href="https://www.sunmoon-yoga.de/kontakt.html"><h3>kontakt</h3></a></li>
                 </ul>
-                <a class="close-nav btn-round btn-round-small" href="#/">x</a>
             </nav>
     
             <div class="nav-backdrop"></div>
@@ -59,158 +59,3 @@
     <script src="JavaScript/app.js"></script>
 </body>
 </html>
-
-<div class="cursor-dot-outline"></div>
-<div class="cursor-dot"></div>
-
-<script>
-    // CUSROS
-    var cursor = {
-        delay: 8,
-        _x: 0,
-        _y: 0,
-        endX: (window.innerWidth / 2),
-        endY: (window.innerHeight / 2),
-        cursorVisible: true,
-        cursorEnlarged: false,
-        $dot: document.querySelector('.cursor-dot'),
-        $outline: document.querySelector('.cursor-dot-outline'),
-
-        init: function() {
-            // Set up element sizes
-            this.dotSize = this.$dot.offsetWidth;
-            this.outlineSize = this.$outline.offsetWidth;
-
-            this.setupEventListeners();
-            this.animateDotOutline();
-        },
-
-        setupEventListeners: function() {
-            var self = this;
-
-            // Anchor hovering
-            document.querySelectorAll(['a', 'button']).forEach(function(el) {
-                el.addEventListener('mouseover', function() {
-                    self.cursorEnlarged = true;
-                    self.toggleCursorSize();
-                });
-                el.addEventListener('mouseout', function() {
-                    self.cursorEnlarged = false;
-                    self.toggleCursorSize();
-                });
-            });
-
-            // Click events
-            document.addEventListener('mousedown', function() {
-                self.cursorEnlarged = true;
-                self.toggleCursorSize();
-            });
-            document.addEventListener('mouseup', function() {
-                self.cursorEnlarged = false;
-                self.toggleCursorSize();
-            });
-
-
-            document.addEventListener('mousemove', function(e) {
-                // Show the cursor
-                self.cursorVisible = true;
-                self.toggleCursorVisibility();
-
-                // Position the dot
-                self.endX = e.pageX;
-                self.endY = e.pageY;
-                self.$dot.style.top = self.endY + 'px';
-                self.$dot.style.left = self.endX + 'px';
-            });
-
-            // Hide/show cursor
-            document.addEventListener('mouseenter', function(e) {
-                self.cursorVisible = true;
-                self.toggleCursorVisibility();
-                self.$dot.style.opacity = 1;
-                self.$outline.style.opacity = 1;
-            });
-
-            document.addEventListener('mouseleave', function(e) {
-                self.cursorVisible = true;
-                self.toggleCursorVisibility();
-                self.$dot.style.opacity = 0;
-                self.$outline.style.opacity = 0;
-            });
-        },
-
-        animateDotOutline: function() {
-            var self = this;
-
-            self._x += (self.endX - self._x) / self.delay;
-            self._y += (self.endY - self._y) / self.delay;
-            self.$outline.style.top = self._y + 'px';
-            self.$outline.style.left = self._x + 'px';
-
-            requestAnimationFrame(this.animateDotOutline.bind(self));
-        },
-
-        toggleCursorSize: function() {
-            var self = this;
-
-            if (self.cursorEnlarged) {
-                self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
-                self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            } else {
-                self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
-                self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
-            }
-        },
-
-        toggleCursorVisibility: function() {
-            var self = this;
-
-            if (self.cursorVisible) {
-                self.$dot.style.opacity = 1;
-                self.$outline.style.opacity = 1;
-            } else {
-                self.$dot.style.opacity = 0;
-                self.$outline.style.opacity = 0;
-            }
-        }
-    }
-
-    cursor.init();
-
-    // STAMPS
-    let number = 0
-    const stamps = [
-        "./Images/stamp-01.svg",
-        "./Images/stamp-02.svg",
-        "./Images/stamp-03.svg",
-        "./Images/stamp-04.svg",
-        "./Images/stamp-05.svg",
-        "./Images/stamp-06.svg",
-        "./Images/stamp-07.svg"
-    ]
-
-    const stampsTag = document.querySelector("div.stamps")
-
-    const addStamp = function (x, y) {
-        // <img src="circles.svg">
-        const img = document.createElement("img")
-        img.setAttribute("src", stamps[number])
-
-        // remove half the window width
-        img.style.left = (x - window.innerWidth / 2) + "px"
-        img.style.top = y + "px"
-
-        stampsTag.appendChild(img)
-
-        number = number + 1
-        if (number > stamps.length - 1) {
-            number = 0
-        }
-    }
-
-    document.addEventListener("click", function (event) {
-        addStamp(event.pageX, event.pageY)
-    })
-
-
-</script>

@@ -7,6 +7,10 @@
   background-position: 50% 90%;
   position: relative;
 
+  @media (max-width: 768px) {
+    background-image: none;
+  }
+
   .insta-link {
     position: absolute;
     height: 400px;
@@ -15,8 +19,17 @@
     left: 0;
     opacity: 0;
 
-    @media (max-width: 600px) {
-      height: 300px;
+    @media (max-width: 768px) {
+      opacity: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 50px;
+      text-align: center;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     &:nth-child(1) {

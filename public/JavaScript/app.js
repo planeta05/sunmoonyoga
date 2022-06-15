@@ -8,6 +8,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+var ContactForm = /*#__PURE__*/_createClass(function ContactForm() {
+  _classCallCheck(this, ContactForm);
+
+  _defineProperty(this, "handleFocus", function () {
+    var formTag = document.querySelectorAll("div.form-group");
+    var focusTag = document.querySelectorAll(".focus-toggle");
+    focusTag.addEventListener("click", function () {
+      formTag.classList.toggle("show-focus");
+    });
+  });
+
+  this.form = document.querySelector(".focus-handler");
+
+  if (this.form) {
+    this.handleFocus();
+  }
+}
+/**
+ * @desc navbar
+ */
+);
+"use strict";
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var ClassesBg = /*#__PURE__*/_createClass(function ClassesBg() {
   var _this = this;
 
@@ -31,24 +62,8 @@ var ClassesBg = /*#__PURE__*/_createClass(function ClassesBg() {
     });
   });
 
-  _defineProperty(this, "addVideoMovement", function () {
-    var topViewport = window.pageYOffset;
-    var midViewport = topViewport + window.innerHeight / 2;
-
-    var topVideo = _this.videoBg.getBoundingClientRect().top;
-
-    var midVideo = topVideo + _this.videoBg.offsetHeight / 6;
-    var distanceToVideo = midViewport - midVideo;
-    console.log(distanceToVideo);
-
-    if (distanceToVideo > 200) {
-      _this.videoBg.style.opacity = 1;
-    }
-  });
-
   this.sections = document.querySelectorAll('.bg-fade');
   this.bodyTag = document.querySelector('body');
-  this.videoBg = document.querySelector('.video-bg.desktop');
 
   if (this.sections) {
     this.addMovement();
@@ -64,37 +79,6 @@ var ClassesBg = /*#__PURE__*/_createClass(function ClassesBg() {
 }
 /**
  * @desc Gallery Slider
- */
-);
-"use strict";
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var ContactForm = /*#__PURE__*/_createClass(function ContactForm() {
-  _classCallCheck(this, ContactForm);
-
-  _defineProperty(this, "handleFocus", function () {
-    var formTag = document.querySelectorAll("div.form-group");
-    var focusTag = document.querySelectorAll(".focus-toggle");
-    focusTag.addEventListener("click", function () {
-      formTag.classList.toggle("show-focus");
-    });
-  });
-
-  this.form = document.querySelector(".focus-handler");
-
-  if (this.form) {
-    this.handleFocus();
-  }
-}
-/**
- * @desc navbar
  */
 );
 "use strict";

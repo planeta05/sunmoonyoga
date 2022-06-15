@@ -2,7 +2,6 @@ class ClassesBg {
   constructor() {
     this.sections = document.querySelectorAll('.bg-fade')
     this.bodyTag = document.querySelector('body')
-    this.videoBg = document.querySelector('.video-bg.desktop')
 
     if (this.sections) {
       this.addMovement()
@@ -45,18 +44,5 @@ class ClassesBg {
     })
   }
 
-  addVideoMovement = () => {
-    const topViewport = window.pageYOffset
-    const midViewport = topViewport + window.innerHeight / 2
 
-    const topVideo = this.videoBg.getBoundingClientRect().top
-    const midVideo = topVideo + this.videoBg.offsetHeight / 6
-
-    const distanceToVideo = midViewport - midVideo
-    console.log(distanceToVideo)
-
-    if (distanceToVideo > 200) {
-      this.videoBg.style.opacity = 1
-    }
-  }
 }

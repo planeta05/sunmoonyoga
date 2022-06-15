@@ -110,7 +110,7 @@
         }
 
         @media (max-width: 600px) {
-          margin-top: -120px;
+          margin-top: -96px;
           margin-right: -60px;
         }
 
@@ -130,56 +130,137 @@
           }
         }
 
-        .icon {
+        .icon,
+        .circle,
+        .icon-m {
           position: absolute;
+        }
+
+        .icon {
+          display: flex;
+
+          @media (max-width: 990px) {
+            display: none;
+          }
+        }
+
+        .icon-m {
+          display: none;
+
+          @media (max-width: 990px) {
+            display: flex;
+          }
         }
       }
     }
 
-    &.bikram,
+
     &.hatha {
 
       .icon {
-        left: 50%;
-        bottom: -80px;
+        bottom: -7px;
+        left: 276px;
+
+        @media (max-width: 1100px) {
+          width: 420px;
+          height: auto;
+          bottom: 6px;
+          left: 210px;
+        }
+
+        @media (max-width: 990px) {
+          display: none;
+        }
+      }
+
+      .icon-m {
+
+        @media (max-width: 990px) {
+          bottom: -158px;
+          right: 115px;
+        }
+
+        @media (max-width: 450px) {
+          width: 280px;
+          height: auto;
+          bottom: -127px;
+          right: 99px;
+        }
+      }
+    }
+
+    .circle {
+      bottom: -11px;
+      right: 72px;
+
+      @media (max-width: 1100px) {
+        width: 58px;
+        height: auto;
+      }
+
+      @media (max-width: 450px) {
+        width: 40px;
       }
     }
 
     &.vinyasa {
 
       .icon {
-        right: 50%;
-        bottom: 80px;
+        bottom: -342px;
+        left: -339px;
 
+        @media (max-width: 1100px) {
+          width: 290px;
+          height: auto;
+          bottom: -229px;
+          left: -233px;
+        }
+      }
+
+      .icon-m {
+
+        @media (max-width: 990px) {
+          bottom: -158px;
+          right: -233px;
+        }
+
+        @media (max-width: 450px) {
+          width: 436px;
+          height: auto;
+          bottom: -139px;
+          right: -180px;
+        }
       }
     }
 
-    @media (max-width: 1100px) {
 
-      &.bikram .icon {
-        width: 300px;
-        height: auto;
-        bottom: -20px;
+    &.bikram {
 
-        left: unset;
-        right: 50px;
-      }
+      .icon {
+        bottom: -59px;
+        left: 81px;
 
-      &.vinyasa .icon {
-          width: 260px;
+        @media (max-width: 1100px) {
+          width: 436px;
           height: auto;
-          bottom: 40px;
-
-          left: unset;
-        right: 50px;
+          bottom: -59px;
+          left: 46px;
+        }
       }
 
-      &.hatha .icon {
-        width: 100px;
-        height: auto;
-        bottom: -40px;
+      .icon-m {
 
-        right: 50px;
+        @media (max-width: 990px) {
+          bottom: -117px;
+          right: -79px;
+        }
+
+        @media (max-width: 450px) {
+          width: 462px;
+          height: auto;
+          bottom: -100px;
+          right: -65px;
+        }
       }
     }
   }

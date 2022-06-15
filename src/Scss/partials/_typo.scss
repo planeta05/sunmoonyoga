@@ -1,11 +1,16 @@
 h1 {
 	font-family: $font-family-circular-bold;
-	color: $color-black;
-	@include font-rem(120px, 100px);
+	color: $color-white;
+	@include font-rem(100px, 100px);
 	margin-bottom: 40px;
 
 	@media (max-width: 768px) {
 		@include font-rem(80px, 80px);
+	}
+
+	@media (max-width: 500px) {
+		font-size: 15vw;
+		margin-bottom: 10px;
 	}
 }
 

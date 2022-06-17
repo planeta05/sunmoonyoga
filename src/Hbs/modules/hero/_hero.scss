@@ -293,6 +293,7 @@
     @media (max-width: 600px) {
       width: calc(100% - 60px);
       height: clamp(400px, 55vh, 600px);
+      top: 47%;
     }
   }
 
@@ -339,6 +340,7 @@
         border-radius: 0;
         background-position: 40% 40%;
         background-size: 150%;
+        top: 50%;
       }
 
       45% {
@@ -347,6 +349,7 @@
         border-radius: 0;
         background-position: 40% 40%;
         background-size: 150%;
+        top: 50%;
       }
 
       70% {
@@ -355,6 +358,7 @@
         border-radius: $border-radius-sm;
         background-size: 180%;
         background-position: 33% 26%;
+        top: 47%;
       }
 
       to {
@@ -363,6 +367,7 @@
         border-radius: $border-radius-sm;
         background-size: 180%;
         background-position: 33% 26%;
+        top: 47%;
       }
     }
   }

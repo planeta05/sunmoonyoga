@@ -163,7 +163,7 @@
     animation-name: heroSubAnimation;
 
     @media (max-width: 600px) {
-      bottom: 9vh;
+      bottom: 5vh;
       left: 0;
       text-align: center;
       width: 100%;
@@ -277,8 +277,8 @@
   .hero-img {
     background-image: url("../Images/hero-big.jpg");
     background-repeat: no-repeat;
-    background-size: 200%;
-    background-position: 32% 40%;
+    background-size: 180%;
+    background-position: 33% 26%;
     position: absolute;
     width: clamp(400px, 28vw, 500px);
     height: clamp(500px, 70vh, 700px);
@@ -317,16 +317,16 @@
       width: clamp(400px, 28vw, 500px);
       height: clamp(500px, 70vh, 700px);
       border-radius: $border-radius-sm;
-      background-position: 32% 40%;
-      background-size: 200%;
+      background-size: 180%;
+      background-position: 33% 26%;
     }
 
     to {
       width: clamp(400px, 28vw, 500px);
       height: clamp(500px, 70vh, 700px);
       border-radius: $border-radius-sm;
-      background-position: 32% 40%;
-      background-size: 200%;
+      background-size: 180%;
+      background-position: 33% 26%;
     }
   }
 
@@ -353,16 +353,16 @@
         width: calc(100% - 60px);
         height: clamp(400px, 55vh, 600px);
         border-radius: $border-radius-sm;
-        background-position: 32% 40%;
-        background-size: 200%;
+        background-size: 180%;
+        background-position: 33% 26%;
       }
 
       to {
         width: calc(100% - 60px);
         height: clamp(400px, 55vh, 600px);
         border-radius: $border-radius-sm;
-        background-position: 32% 40%;
-        background-size: 200%;
+        background-size: 180%;
+        background-position: 33% 26%;
       }
     }
   }

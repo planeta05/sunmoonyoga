@@ -139,7 +139,7 @@
     opacity: 1;
     width: fit-content;
 
-    animation-duration: 5s;
+    animation-duration: 4.5s;
     animation-name: heroHlAnimation;
 
     h1 {
@@ -159,11 +159,11 @@
     bottom: 40px;
     opacity: 1;
 
-    animation-duration: 5s;
+    animation-duration: 4.5s;
     animation-name: heroSubAnimation;
 
     @media (max-width: 600px) {
-      bottom: 5vh;
+      bottom: 2vh;
       left: 0;
       text-align: center;
       width: 100%;
@@ -234,7 +234,7 @@
       top: -20px;
       right: -20px;
 
-      animation-duration: 5s;
+      animation-duration: 4.5s;
       animation-name: heroIlluAnimation;
 
       @media (max-width: 600px) {
@@ -287,7 +287,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
 
-    animation-duration: 5s;
+    animation-duration: 4.5s;
     animation-name: heroAnimation;
 
     @media (max-width: 600px) {
@@ -352,7 +352,7 @@
         top: 50%;
       }
 
-      70% {
+      65% {
         width: calc(100% - 60px);
         height: clamp(400px, 55vh, 600px);
         border-radius: $border-radius-sm;

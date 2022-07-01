@@ -96,6 +96,13 @@
 
     .highlight {
         text-align: center;
+
+      h6 {
+        @media (max-width: 600px) {
+          font-size: 13px;
+          line-height: 22px;
+        }
+      }
     }
   }
 }

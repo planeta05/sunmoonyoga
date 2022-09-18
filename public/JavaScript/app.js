@@ -88,4 +88,12 @@ document.addEventListener('scroll', function () {
   } else {
     headerTag.classList.remove('scrolled');
   }
+}); //accordion logic
+
+var faqs = Array.from(document.querySelectorAll('.btn-toggle'));
+faqs.map(function (faq) {
+  faq.addEventListener('click', function () {
+    this.classList.toggle('open');
+    this.nextElementSibling.classList.toggle('show');
+  });
 });

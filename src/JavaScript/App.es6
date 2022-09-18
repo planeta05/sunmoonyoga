@@ -55,3 +55,12 @@ document.addEventListener('scroll', function () {
     headerTag.classList.remove('scrolled')
   }
 })
+
+//accordion logic
+const faqs = Array.from(document.querySelectorAll('.btn-toggle'))
+faqs.map(faq => {
+  faq.addEventListener('click', function() {
+    this.classList.toggle('open')
+    this.nextElementSibling.classList.toggle('show')
+  })
+})

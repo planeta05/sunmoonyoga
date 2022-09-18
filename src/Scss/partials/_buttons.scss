@@ -1,0 +1,52 @@
+.btn-yellow {
+  background-color: #FFF6B7;
+  color: #9382BD;
+  border: none;
+  border-radius: 0;
+  padding: 15px 24px;
+  font-family: $font-family-circular-bold;
+
+  &:hover {
+    color: #9382BD;
+    text-decoration: none;
+  }
+}
+
+.btn {
+  font-family: $font-family-circular-regular;
+  color: $color-tertiary;
+  background-color: $color-primary;
+  border: 2px solid $color-primary;
+  border-radius: 400px;
+  font-size: clamp(24px, 5vw, 34px);
+  text-transform: uppercase;
+  padding: 4px 10px;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-tertiary;
+    color: $color-primary-dark;
+    border: 2px solid $color-tertiary;
+  }
+
+  &.btn-big {
+    font-size: clamp(40px, 6vw, 60px);
+    padding: 10px 20px;
+  }
+
+  &.with-border {
+    border: 2px solid $color-tertiary;
+  }
+
+  &.secondary {
+    background-color: transparent;
+    color: $color-primary;
+    border: 2px solid transparent;
+    text-transform: none;
+
+    &:hover {
+      color: #FEF2A1;
+    }
+  }
+}

@@ -13,12 +13,12 @@
 <body>
 
 <header>
-    <header>
+    
         <div class="container">
             <a class="logo-link" href="https://www.sunmoon-yoga.de/">
                 <img src="./Images/logo.svg">
             </a>
-            <a class="nav-toggle btn" href="#/">m</a>
+            <a class="nav-toggle btn with-border" href="#/">menü</a>
             <nav>
                 <a class="close-nav btn-round btn-round-small" href="#/">x</a>
                 <img class="logo" src="./Images/logo_schriftzug-unten_schwarz.svg">
@@ -31,8 +31,7 @@
             </nav>
     
             <div class="nav-backdrop"></div>
-        </div>
-    </header></header>
+        </div></header>
 
 <main class="">
             <section class="hero-animation bg-fade" data-background="#ffffff">
@@ -44,13 +43,14 @@
                 </div>
         
                 <div class="sub-content">
-                    <h4>Yoga in Essen</h4>
-                    <h4>Mit Herz & Verstand</h4>
+                    <h3>Yoga in Essen</h3>
+                    <h3>Mit Herz & Verstand</h3>
                 </div>
             </div>
         
             <div class="img-wrap">
-                <img class="illu illu-line" src="./Images/hero-line.svg">
+                <img class="illu illu-line desktop" src="./Images/hero-line.svg">
+                <img class="illu illu-line mobile" src="./Images/hero-line-mobile.svg">
                 <div class="hero-img">
                     <img class="illu illu-circle" src="./Images/hero-circle.svg">
                 </div>
@@ -58,211 +58,245 @@
         </section>
         
 
-        <section id="sec-about" class='about bg-fade' data-background='#ffffff'>
-            <source src='./Images/hero-bg.mp4' type='video/mp4' data-wf-ignore='true' />
-          </video>
-        
-          <video autoplay muted playsinline loop class='video-bg desktop'>
-            <source src='./Images/bg-video_small.mp4' type='video/mp4' />
-          </video>
-        
-            <div class="container">
-                <div class="video-content">
-                    <h2>mein Fokus</h2>
-                    <div class="content-wrap">
-                        <div class="top">
-                            <p>Ursprünglich war Yoga für mich einfach ein Sport. Doch mit der Zeit identifizierte ich mich Stück für Stück mehr mit der Philosophie über den Zusammenhang von Körper und Geist – und bin mir selbst dadurch nähergekommen. Verbesserte Konzentration, ein gutes Stressmanagement & bessere Schlafqualität waren nur einige der Vorteile, die ich schnell spüren durfte. Diese Erfahrungen möchte ich als Yoga-Lehrerin an andere weitergeben. Gelernt habe ich klassisches Hatha Yoga nach der Sivananda Tradition, welche einen besonderen Fokus auf den ganzheitlichen Ansatz von Yoga legt. Nach einer Fortbildung im Yoga Sequencing habe ich meine Liebe zum Vinyasa Yoga entdeckt.
-                            </p>
-                        </div>
-                        <div class="highlight">
-                            <h6>Jeder Körper ist einzigartig. Daher liegt mein Schwerpunkt auf der Förderung deines individuellen Körpergefühls anstatt einer perfekt aussehenden Außenwahrnehmung.</h6>
-                        </div>
-                    </div>
+        <section class="about">
+        <div class="container">
+            <div class="row head">
+                <div class="col-9 col-sm-6 col-lg-5">
+                    <img class="img-fluid" src="./Images/about.jpg">
+                </div>
+                <div class="col-12 col-sm-8 col-lg-6 offset-lg-1">
+                    <h3>Nur ein Sport, dachte ich früher. So viel mehr, weiß ich jetzt.</h3>
                 </div>
             </div>
-        </section>        <section  id="sec-classes" data-background="#ffffff">
-            <div class="container">
-                <div class="text-animation">
-                    <h2 class="animated one">ohne hokus pokus</h2>
-                    <h2 class="animated two">
-                        mit herz und verstand</h2>
-                    <h4>So bauen sich meine Kurse auf</h4>
-                </div>
-            </div>
-        </section>
-        
-        <section class="classes">
-            <div class="class hatha bg-fade" data-background="#C4BADD">
-                <div class="container">
-                    <div class="description">
-                        <div class="head">
-                            <h4>Hatha</h4>
-                            <h2>gezielte asanas in achtsamen flows</h2>
-                        </div>
-                        <p>Einatmen, ausatmen – und dazu bewegen. Das ist der Kern von Vinyasa Yoga, bei dem die Asanas fließend ineinander übergehen.
-                        Die Grundlage hierzu ist Hatha Yoga – die Körperhaltungen (Asanas) im Yoga. „Ha“ bedeutet Sonne, wohingegen „tha“ mit Mond übersetzt wird – daher auch sun moon yoga. Die Asanas dehnen und kräftigen unsere Muskeln, Sehen und Bänder. Sie bewahren uns vor Atrophie, der Verkümmerung jeglicher Organismen und Bestandteile unseres wertvollen Körpers.
-        <br><br>
-                            Um während der fließenden Übergänge eine gesunde Körperhaltung sicherzustellen, lege ich bei meinen Flows mehr Wert auf Achtsamkeit und langes Halten als auf schnelle Bewegungsabläufe.</p>
-                        <div class="tags">
-                            <h6>Kraft</h6>
-                            <h6>Vinyasa</h6>
-                            <h6>Körpergefühl</h6>
-                        </div>
-                    </div>
-        
-                    <div class="image">
-                        <img class="photo" src="./Images/hatha.jpg">
-                        <img class="icon" src="./Images/illu-1.svg">
-                        <img class="icon-m" src="./Images/illu-1_m.svg">
-                        <img class="circle" src="./Images/illu-circle.svg">
-                    </div>
-                </div>
-            </div>
-        
-            <div class="class vinyasa bg-fade" data-background="#B5C9D1">
-                <div class="container reverse">
-                    <div class="description">
-                        <div class="head">
-                            <h4>Yin</h4>
-                            <h2>stretching für den körper, cooldown für den geist</h2>
-                        </div>
-                        <p>Am Ende der Yogastunde sind Körper & Geist nun bereit für intensive Dehnungen. Bei der nachfolgenden Yin Yoga Sequenz fokussieren wir uns auf das Gewebe im Körper, um es gesund und flexibel zu erhalten. Die sorgsam ausgewählten Asanas werden lange gehalten, um unserem Gewebe Zeit zu geben, sich zu öffnen. Denn durch das Dehnen nach körperlicher Anstrengung im Vinyasa können sich die Muskeln entspannen und schneller regenerieren. So werden deine Beweglichkeit und Flexibilität gefördert.
-        <br><br>
-                            Gleichzeitig bekommt unser Geist dabei endliche eine Pause, um sich zu sortieren – quasi eine aktive Meditation. Denn diese Ruhe fehlt uns häufig in unserem stressigen Alltag.</p>
-                        <div class="tags">
-                            <h6>Faszien</h6>
-                            <h6>Stressreduktion</h6>
-                            <h6>Flexibilität</h6>
-                        </div>
-                    </div>
-        
-                    <div class="image">
-                        <img class="photo" src="./Images/yin.jpg">
-                        <img class="icon" src="./Images/illu-2.svg">
-                        <img class="icon-m" src="./Images/illu-2_m.svg">
-                        <img class="circle" src="./Images/illu-circle.svg">
-                    </div>
-                </div>
-            </div>
-        
-            <div class="class bikram bg-fade" data-background="#C4BADD">
-                <div class="container">
-                    <div class="description">
-                        <div class="head">
-                            <h4>Raja</h4>
-                            <h2>mehr positivität und ein starkes bewusstsein</h2>
-                        </div>
-                        <p>Jeder Schritt, den wir gehen und jede Handlung, die wir tun, fängt mit einem Gedanken an – wie bedeutend ist es also, unseren (gesunden) Geist im Auge zu behalten? Mir geht es nicht darum, negativen Gefühlen keinen Raum zu geben oder sie zu unterdrücken. Es geht vielmehr darum, durch die Beobachtung von Verhaltensmustern deinen Geist nachhaltig zu schärfen und die Ablenkungen des Alltags auszumerzen. Dadurch kannst du Stück für Stück mehr echte Positivität und tiefe, innere Zufriedenheit erlangen, welche durch äußere Umstände nicht mehr so leicht zu erschüttern ist.
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6">
+                    <p>Was als einer jahrhundertealte Philosophie aus Lehrbüchern anfing, ist mit der Zeit zu einem Verständnis für Körper und Geist gewachsen – ein Verständnis, dass mich in jedem Tag in meinem Alltag begleitet und mich näher zu mir selbst bringt: Es verbessert meine Konzentration, lässt mich erholt Schlafen & und bringt mir die Ruhe die ich an stressigen Tagen dringend brauche.
                         <br><br>
-                            Da für meine eigene Praxis Raja Yoga eine große Rolle spielt, verbinde ich die körperliche Praxis also gerne mit Thematiken aus dem königlichen Yogaweg, dem Raja Yoga.
-                        </p>
-                        <div class="tags">
-                            <h6>Selbstfürsorge</h6>
-                            <h6>Willenskraft</h6>
-                            <h6>Achtsamkeit</h6>
-                        </div>
-                    </div>
-        
-                    <div class="image">
-                        <img class="photo" src="./Images/raja.jpg">
-                        <img class="icon" src="./Images/illu-3.svg">
-                        <img class="icon-m" src="./Images/illu-3_m.svg">
-                        <img class="circle" src="./Images/illu-circle.svg">
-                    </div>
+                        Diese Erfahrungen möchte ich als Yoga-Lehrerin an dich weitergeben. Denn das Wichtigste, was wir durch die Praxis lernen: Wir selbst sind für unsere körperliche & mentale Gesundheit verantwortlich und  können uns langfristig glücklich machen. Also, worauf wartest du noch?</p>
                 </div>
             </div>
-        </section>        <section class='video-bg'>
-          <div class='overlay'></div>
-          <video
-            autoplay
-            muted
-            playsinline
-            loop
-            class='video-bg mobile'
-            data-wf-ignore='true'
-            data-object-fit='cover'
-          >
-            <source src='./Images/hero-bg.mp4' type='video/mp4' data-wf-ignore='true' />
-          </video>
-        
-          <video autoplay muted playsinline loop class='video-bg desktop' >
-            <source src='./Images/hero-bg-gross.mp4' type='video/mp4' />
-          </video>
-        
-            <div class="video-content">
-                <div class="text-animation">
-                    <h2 class="animated one">starker körper</h2>
-                    <h2 class="animated two">
-                        klarer geist</h2>
-                    <h4>Das Ziel jeder meiner Kurse</h4>
+        </div>
+        </section>
+        <section class="course-preview">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h2 class="head">kurse</h2>
+                    </div>
+                    <div class="col-12 col-lg-10 col-xl-8">
+                        <div class="course-card-wrap">
+                            <div class="course-card-content-wrap">
+                                <div style="background-image: url('./Images/course-card-vinyasa.jpg')" class="course-card">
+                                    <h4>im flow</h4>
+                                    <h3>vinyasa</h3>
+                                </div>
+
+                                <div class="links">
+                                    <a class="btn secondary" href="sunmoon-yoga.de/vinyasa.html">+ mehr</a>
+                                    <a class="btn" href="sunmoon-yoga.de/vinyasa-buchung.html">buchen</a>
+                                </div>
+                            </div>
+
+                            <div class="course-card-content-wrap">
+                                <div style="background-image: url('./Images/course-card-postnatal.jpg')" class="course-card">
+                                    <h4>mama & baby</h4>
+                                    <h3>postnatal</h3>
+                                </div>
+
+                                <div class="links">
+                                    <a class="btn secondary" href="sunmoon-yoga.de/postnatal.html">+ mehr</a>
+                                    <a class="btn" href="sunmoon-yoga.de/postnatal-buchung.html">buchen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        
-        
-        <section class="instagram-teaser bg-fade" data-background="#fff">
-            <a class="insta-link" target="blank" href="https://www.instagram.com/sunmoon.yoga/?hl=de"><h2>sun moon auf instagram</h2> </a>
-                <div class="container">
-                    <div class="postings">
-                        <div class="post-col">
-                            <a href="https://www.instagram.com/p/CbdelbXD8PN/?hl=de" target="blank" class="post">
-                                <img src="./Images/insta-02.jpg">
-                            </a>
-        
-                            <a href="https://www.instagram.com/p/CaI1u84DQlt/" target="blank" class="post">
-                                <img src="./Images/insta-01.jpg">
-                            </a>
-                        </div>
-        
-                        <div class="post-col">
-                            <a href="https://www.instagram.com/p/CaUBvJbjc8y/" target="blank" class="post">
-                                <video autoplay muted playsinline loop class="">
-                                    <source src="./Images/hero-bg.mp4" type="video/mp4">
-                                </video>
-                            </a>
-        
-                            <a href="https://www.instagram.com/p/Ccmy0rvDBFJ/?hl=de" target="blank" class="post">
-                                <img src="./Images/insta-04.jpg">
-                            </a>
-                        </div>
-        
-                        <div class="post-col">
-                            <a href="https://www.instagram.com/p/Ceb05jSDZH7/?hl=de" target="blank" class="post">
-                                <img src="./Images/insta-05.jpg">
-                            </a>
-        
-                            <a href="https://www.instagram.com/p/CcyC3NZjzIX/?hl=de" target="blank" class="post">
-                                <img src="./Images/insta-03.jpg">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            <a class="insta-link" target="blank" href="https://www.instagram.com/sunmoon.yoga/?hl=de"><h2>sun moon auf instagram</h2> </a>
-        </section>        <section id="sec-nl" class="newsletter bg-fade" data-background="#C4BADD">
-            <h2>sei dabei!</h2>
+        <section class="pricing">
+            <img class="line top" src="./Images/pricing-line-top.svg">
+            <img class="line bottom" src="./Images/pricing-line-bottom.svg">
             <div class="container">
-                <div class="content">
-                    <div class="text">
-                        <h3>Wenn du gemeinsam mit mir im Studio Yoga auf eine neue Weise entdecken möchtest, dann bleib doch gerne auf dem Laufenden. Denn Pläne für Kurse in Essen Süd gibt es – und wenn es dazu etwas Neues gibt, gebe ich dir Bescheid.
-                        </h3>
-                        <h4>kein spam. nur bhakti.</h4>
+                <div class="item-wrap">
+                    <div class="item">
+                        <h3>Für die Spontanen</h3>
+                        <div class="price">
+                            <p>Drop-In</p>
+                            <p>14 €</p>
+                        </div>
                     </div>
-                    <!--
-                    <form class="validate focus-handler" method="post">
-                            <label for="inputEmail">E-Mail Adresse</label>
-                            <input type="text" class="form-control focus-toggle" id="inputEmail" placeholder="E-Mail Adresse" data-rule="email" data-msg="Bitte geben Sie eine gültige E-Mail Adresse ein.">
         
-                        <button type="submit" class=""><img src="./Images/icon-submit.svg"></button>
-                    </form>
-                    -->
-                    <div class="jotform">
-                        <script type="text/javascript" src="https://form.jotform.com/jsform/221562831935054"></script>
+                    <div class="item">
+                        <h3>Um im Flow zu bleiben</h3>
+                        <div class="price">
+                            <p>10er Karte</p>
+                            <p>12 €</p>
+                        </div>
+                    </div>
+        
+                    <div class="item">
+                        <h3>Weil du es verdienst</h3>
+                        <div class="price">
+                            <p>Ermäßigt</p>
+                            <p>10 €</p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>        <section class="location container">
+            <div class="row head">
+                <div class="col-9 col-sm-6 col-lg-4">
+                    <img class="img-fluid" src="./Images/location-top.jpg">
+                </div>
+                <div class="col-12 col-sm-8 col-lg-7 offset-lg-1">
+                    <h2>location</h2>
+                </div>
+            </div>
         
-            <img class="illu" src="./Images/illu-nl.svg">
+            <div class="row middle">
+                <div class="col-12 col-sm-9 col-lg-5">
+                    <div class="content">
+                        <h3>villa rü</h3>
+                        <p>Girardetstraße 21<br> 45131 Essen
+                            <br><br>
+                            2. Stock<br>
+                            Raum 302</p>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-3 col-lg-5 offset-lg-1">
+                    <img class="img-fluid" src="./Images/location-middle.jpg">
+                </div>
+            </div>
+        
+            <div class="row bottom justify-content-center">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img class="img-fluid" src="./Images/location-bottom.jpg">
+                </div>
+            </div>
+        </section>        <section class="cta">
+            <div class="container">
+                <h2>Noch Fragen?</h2>
+                <a class="btn btn-big with-border" href="sunmoon-yoga.de/kontakt.html">Kontakt</a>
+            </div>
+        </section>
+
+
+        <section class="faq">
+            <div class="container">
+                <div class="row head">
+                    <div class="col-9 col-sm-6 col-lg-5">
+                        <img class="img-fluid" src="./Images/faq.jpg">
+                    </div>
+                    <div class="col-12 col-sm-8 col-lg-6 offset-lg-1">
+                        <h3>Die wichtigsten Antworten auf einen Blick</h3>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <div class="faq-card">
+                            <a class="btn-toggle open">
+                                <h3>Brauche ich Vorerfahrung im Yoga?</h3><h3 class="toggle-icon"><span class="open-icon">+</span> <span class="close-icon">–</span></h3>
+                            </a>
+                            <div class="content show">
+                                <p>Auch wenn du noch nie eine Yoga-Matte ausgerollt hast, bist du in der Villa Rü richtig. In deiner Yogapraxis gehst du immer nur soweit, wie es sich für dich und deinen Körper gut anfühlt. Ich unterstütze dich dabei, die Signale deines Körpers wahrzunehmen und darauf zu reagieren.</p>
+                                <p>Allerdings gibt es ein paar <a href="#">Leitlinien</a> für deine erste Stunde bei mir, die du dir vor deinem ersten Yogakurs unbedingt durchlesen solltest.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-card">
+                            <a class="btn-toggle">
+                                <h3>Muss ich meine Matte selbst mitbringen?</h3><h3 class="toggle-icon"><span class="open-icon">+</span> <span class="close-icon">–</span></h3>
+                            </a>
+                            <div class="content">
+                                <p>Da jede:r Yogi:ni seine Vorlieben und unterschiedliche Bedürfnisse hat, bringst du deine eigene Matte mit. Solltest du noch keine Yogamatte haben und nicht wissen, welche Matte für dich geeignet ist, <a href="sunmoon-yoga.de/kontakt.html">schreib’ mir</a> oder schau mal hier vorbei:</p>
+                                <p class="info">Der <a target="blank" href="https://www.fuckluckygohappy.de/fuenf-yogamatten-im-test/">Yogamatten-Test</a> von fuckluckygohappy kann dir behilflich sein, eine gute Matte auszuwählen.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-card">
+                            <a class="btn-toggle">
+                                <h3>Werden die Kurse auch online angeboten</h3><h3 class="toggle-icon"><span class="open-icon">+</span> <span class="close-icon">–</span></h3>
+                            </a>
+                            <div class="content">
+                                <p>Ein Online-Angebot der aktuellen Kurse gibt es leider nicht. Wenn du nach einem guten Online Yoga-Studio suchst, kann ich dir <a href="https://www.yogaeasy.de/">yogaeasy</a> ans Herz legen.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-card">
+                            <a class="btn-toggle">
+                                <h3>Wie kann ich bezahlen?</h3><h3 class="toggle-icon"><span class="open-icon">+</span> <span class="close-icon">–</span></h3>
+                            </a>
+                            <div class="content">
+                                <p>Bezahlen kannst du vor Ort, mit allen Karten oder per Paypal überweisen. Eine Barzahlung ist nicht möglich.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-card">
+                            <a class="btn-toggle">
+                                <h3>Wann bekomme ich die Ermäßigung?</h3><h3 class="toggle-icon"><span class="open-icon">+</span> <span class="close-icon">–</span></h3>
+                            </a>
+                            <div class="content">
+                                <p>Der ermäßigte Preis richtet sich an Personen, die sich in einer besonderen finanziellen Situation befinden. Diese können sein:</p>
+                                <ul class="small">
+                                    <li>Schüler*innen</li>
+                                    <li>Studierende</li>
+                                    <li>Mütter & Väter in Elternzeitn</li>
+                                    <li>Schwerbehinderte Personen</li>
+                                    <li>ALG Beziehende</li>
+                                    <li>Personen, die Transferleistungen (ALG, Sozialhilfe, Grundsicherung oder Leistungen nach dem Asylbewerberleistungsgesetz) erhalten</li>
+                                </ul>
+                                <p>Noch nicht sicher? <a href="sunmoon-yoga.de/kontakt.html">Schreib’ mir gerne!</a> </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-card">
+                            <a class="btn-toggle">
+                                <h3>Wo kann ich die 10er Karte kaufen & wie lange ist sie gültig?</h3><h3 class="toggle-icon"><span class="open-icon">+</span> <span class="close-icon">–</span></h3>
+                            </a>
+                            <div class="content">
+                                <p>Die Karte kaufst du vor oder nach deinem Yoga-Kurs vor Ort. Die Gültigkeit der beträgt ein Jahr.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-card">
+                            <a class="btn-toggle">
+                                <h3>Was ist wenn der Kurs bereits gebucht ist, ich aber doch absagen muss? </h3><h3 class="toggle-icon"><span class="open-icon">+</span> <span class="close-icon">–</span></h3>
+                            </a>
+                            <div class="content">
+                                <p>Uns allen kommt mal etwas dazwischen – versuche bitte 24 Stunden vor Kursbeginn abzusagen, damit jemand anderes deinen Platz einnehmen kann. Bei Krankheitsfällen oder dringenden Notfällen, kannst du natürlich auch am selben Tag Bescheid geben. </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-card">
+                            <a class="btn-toggle">
+                                <h3>Wo finden die Yogastunden statt?</h3><h3 class="toggle-icon"><span class="open-icon">+</span> <span class="close-icon">–</span></h3>
+                            </a>
+                            <div class="content">
+                                <p>Die Yogastunden finden in der <a href="https://de-de.facebook.com/VillaRue/" target="blank">Villa Rü</a> statt, direkt gegenüber vom Girardethaus. Da wir uns mitten in Rüttenscheid befinden, Plane genug Zeit zum parken ein, falls du mit dem Auto kommst.</p>
+                                <p><strong>Adresse</strong><br>
+                                    Girardetstraße 21,<br>
+                                    45131 Essen
+                                </p>
+                                <p>
+                                    <strong>Postnatal – </strong> Raum 202<br>
+                                    <strong>Vinyasa – </strong> Raum 203<br>
+                                </p>
+                                <p>Direkt zu <a href="https://goo.gl/maps/eCWHkHw3a43snPAC6">Google Maps</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-image">
+            <div class="image"  style="background-image: url('./Images/kurse.jpg')"></div>
+            <div class="content">
+                <h3>Heute schon gespürt?</h3>
+                <a class="btn" href="sunmoon-yoga.de/kurse.html">die Kurse</a>
+            </div>
         </section>
         <!--
         <div class="stamps">

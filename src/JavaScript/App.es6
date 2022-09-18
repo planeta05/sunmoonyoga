@@ -1,6 +1,5 @@
 class App {
   constructor() {
-    new ClassesBg()
 
     if (document.querySelector('.form-row')) {
       new FormValidation()

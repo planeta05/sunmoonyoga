@@ -1,0 +1,66 @@
+.faq {
+  margin-bottom: clamp(50px, 6vw, 200px);
+
+  .faq-card {
+    margin-bottom: 60px;
+  }
+
+  .btn-toggle {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+      h3 {
+        font-size: clamp(34px, 6vw, 40px);
+        margin-bottom: 20px;
+      }
+
+    .toggle-icon {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        position: absolute;
+      }
+
+      .close-icon {
+        opacity: 0;
+      }
+    }
+
+    &.open {
+
+      h3 {
+        color: #A9C0CB;
+      }
+
+      .close-icon {
+        opacity: 1;
+      }
+
+      .open-icon {
+        opacity: 0;
+      }
+    }
+  }
+
+  .content {
+    display: none;
+
+    @media (min-width: 990px) {
+      width: calc(100% - 80px);
+    }
+
+    &.show {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.location {
+  margin-top: clamp(140px,10vw,400px);
+  margin-bottom: clamp(140px,10vw,400px);
+
+  .head {
+    align-items: center;
+
+    @media (max-width: 990px) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: clamp(50px, 6vw, 200px);
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    img {
+
+      @media (max-width: 990px) {
+        margin-bottom: clamp(50px, 6vw, 200px);
+      }
+
+      @media (max-width: 576px) {
+        margin-left: 170px;
+      }
+    }
+  }
+
+  .middle {
+    align-items: center;
+    margin-bottom: clamp(50px, 6vw, 200px);
+    text-align: right;
+
+    @media (max-width: 990px) {
+      align-items: flex-start;
+      text-align: left;
+
+      .content {
+        display: flex;
+
+        h3 {
+          margin-right: 100px;
+        }
+      }
+    }
+
+    @media (max-width: 450px) {
+
+      .content {
+        h3 {
+          margin-right: 40px !important;
+        }
+      }
+    }
+
+    @media (max-width: 400px) {
+
+      .content {
+        flex-direction: column;
+
+      }
+    }
+
+    img {
+
+      @media (max-width: 990px) {
+        margin-top: clamp(50px, 6vw, 200px);
+      }
+
+      @media (min-width: 576px) and (max-width: 990px) {
+        width: 200%;
+        height: auto;
+        max-width: unset;
+        margin-top: -200px;
+      }
+
+      @media (max-width: 576px) {
+        margin-left: -40px;
+      }
+    }
+  }
+}

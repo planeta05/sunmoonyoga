@@ -21,7 +21,7 @@
     &.no-bg {
       background-color: transparent;
       text-align: left;
-      padding: 60px 0;
+      padding: 100px 0 60px;
       width: 600px;
 
       @media (max-width: 768px) {
@@ -53,13 +53,31 @@
     }
   }
 
+  a {
+
+    &:hover {
+      color: $color-tertiary;
+    }
+  }
+
+  ul {
+
+    li {
+      &::before {
+        background-color: #fff;
+      }
+    }
+  }
+
   .sub-content {
     text-align: center;
     margin-top: 30px;
 
     a {
-      color: $color-tertiary;
-      letter-spacing: .5px;
+
+      &:hover {
+        color: $color-tertiary;
+      }
     }
   }
 
@@ -87,6 +105,10 @@
         margin-top: 0;
       }
     }
+  }
+
+  iframe {
+    margin-bottom: -100px;
   }
 
   .form {

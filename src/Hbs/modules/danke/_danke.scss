@@ -1,4 +1,4 @@
-.start-animation {
+.danke {
   width: 100vw;
   height: 100vh;
   background-color: #C4BADD;
@@ -33,10 +33,6 @@
       margin-top: 50px;
     }
 
-    .btn-yellow {
-      margin-top: 20px;
-    }
-
     .links {
       margin-top: 70px;
       margin-bottom: 100px;
@@ -46,9 +42,11 @@
       }
 
       a {
-        color: $color-tertiary;
         padding: 20px;
 
+        &:hover {
+          color: $color-tertiary;
+        }
       }
     }
   }

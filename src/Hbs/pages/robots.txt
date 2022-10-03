@@ -1,8 +1,1 @@
-User-agent: Googlebot
-Disallow: /impressum
-Disallow: /datenschutz
-Disallow: /postnatal-danke
-Disallow: /vinyasa-danke
-
-User-agent: *
-Allow: /
+google-site-verification: google147e6af64fa3079d.html

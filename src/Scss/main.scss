@@ -1,30 +1,31 @@
 // Partials
-@import 'partials/variables';
-@import 'partials/mixins';
+@import "partials/variables";
+@import "partials/mixins";
 
 // Vendor Styles
-@import '../../node_modules/bootstrap/scss/bootstrap';
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Global Styles
-@import 'partials/fonts';
-@import 'partials/layout';
-@import 'partials/typo';
-@import 'partials/clean-layout';
-@import 'partials/buttons';
+@import "partials/fonts";
+@import "partials/layout";
+@import "partials/typo";
+@import "partials/clean-layout";
+@import "partials/buttons";
+@import "partials/remove-text-decoration";
 
 // Modules
-@import '../Hbs/modules/navbar/navbar';
-@import '../Hbs/modules/hero/hero';
-@import '../Hbs/modules/footer/footer';
-@import '../Hbs/modules/contact-form/contact-form';
-@import '../Hbs/modules/video-bg/video-bg';
-@import '../Hbs/modules/instagram-teaser/instagram-teaser';
-@import '../Hbs/modules/newsletter/newsletter';
-@import '../Hbs/modules/about/about';
-@import '../Hbs/modules/danke/danke';
-@import '../Hbs/modules/text-animation/text-animation';
-@import '../Hbs/modules/course/course';
-@import '../Hbs/modules/pricing/pricing';
-@import '../Hbs/modules/cta-image/cta-image';
-@import '../Hbs/modules/location/location';
-@import '../Hbs/modules/faq/faq';
+@import "../Hbs/modules/navbar/navbar";
+@import "../Hbs/modules/hero/hero";
+@import "../Hbs/modules/footer/footer";
+@import "../Hbs/modules/contact-form/contact-form";
+@import "../Hbs/modules/video-bg/video-bg";
+@import "../Hbs/modules/instagram-teaser/instagram-teaser";
+@import "../Hbs/modules/newsletter/newsletter";
+@import "../Hbs/modules/about/about";
+@import "../Hbs/modules/danke/danke";
+@import "../Hbs/modules/text-animation/text-animation";
+@import "../Hbs/modules/course/course";
+@import "../Hbs/modules/pricing/pricing";
+@import "../Hbs/modules/cta-image/cta-image";
+@import "../Hbs/modules/location/location";
+@import "../Hbs/modules/faq/faq";

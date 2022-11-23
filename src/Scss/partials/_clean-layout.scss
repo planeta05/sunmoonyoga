@@ -1,5 +1,5 @@
 .clean-layout {
-    min-height: 100vh;
+  min-height: 100vh;
   background-color: $color-primary;
   display: flex;
   justify-content: center;
@@ -8,6 +8,16 @@
 
   @media (max-width: 500px) {
     padding: 80px 20px;
+  }
+
+  .contact {
+    .content {
+      a {
+        &:hover {
+          color: black;
+        }
+      }
+    }
   }
 
   .content {
@@ -54,14 +64,12 @@
   }
 
   a {
-
     &:hover {
       color: $color-tertiary;
     }
   }
 
   ul {
-
     li {
       &::before {
         background-color: #fff;
@@ -74,7 +82,6 @@
     margin-top: 30px;
 
     a {
-
       &:hover {
         color: $color-tertiary;
       }
@@ -99,7 +106,6 @@
     }
 
     .text {
-
       h6 {
         margin-bottom: 0;
         margin-top: 0;
@@ -112,7 +118,6 @@
   }
 
   .form {
-
     h4 {
       margin-bottom: 40px;
     }

@@ -1,59 +1,70 @@
 .hero-course {
-   height: 85vh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  .hero-image {
+    height: 85vh;
+    height: 85dvh;
     background-image: url("../Images/classes_vinyasa.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
 
-  @media (max-width: 768px) {
-    height: 70vh;
+    @media (max-width: 768px) {
+      height: 75vh;
+      height: 75dvh;
+    }
   }
 
-    .line {
-      position: absolute;
-      top: -10vh;
-      right: -10vw;
-      z-index: 1;
-      width: clamp(800px, 80vw, 1500px);
+  .line {
+    position: absolute;
+    top: -10vh;
+    right: -10vw;
+    z-index: 1;
+    width: clamp(800px, 80vw, 1500px);
 
+    &.mobile {
+      display: none;
+    }
+
+    @media (max-width: 700px) {
       &.mobile {
+        display: block;
+        width: unset;
+        right: -100px;
+        top: -10px;
+      }
+
+      &.desktop {
         display: none;
       }
-
-      @media (max-width: 700px) {
-        &.mobile {
-          display: block;
-          width: unset;
-          right: -100px;
-          top: -10px;
-        }
-
-        &.desktop {
-          display: none;
-        }
-      }
     }
+  }
 
-    .content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      flex-direction: column;
-      position: relative;
-      z-index: 2;
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
 
-      h4 {
-        color: $color-tertiary;
-        margin-bottom: -20px;
-      }
+    h4 {
+      color: $color-tertiary;
+      margin-bottom: -20px;
     }
+  }
 }
-
 
 .course-time {
   height: 15vh;
+  height: 15dvh;
 
   .content {
     display: flex;
@@ -74,7 +85,8 @@
   }
 
   @media (max-width: 768px) {
-    height: 30vh;
+    height: 25vh;
+    height: 25dvh;
 
     .content {
       flex-direction: column;
@@ -89,11 +101,9 @@
   }
 }
 
-
 .course-description,
 .about,
 .faq {
-
   .head {
     align-items: center;
     margin-bottom: clamp(50px, 6vw, 200px);
@@ -122,7 +132,6 @@
   }
 
   .text-middle {
-
     @media (min-width: 990px) {
       h3 {
         width: clamp(250px, 30vw, 400px);
@@ -145,8 +154,8 @@
       img {
         margin-bottom: clamp(50px, 6vw, 200px);
 
-          @media (max-width: 576px) {
-            margin-left: -50px;
+        @media (max-width: 576px) {
+          margin-left: -50px;
         }
       }
     }
@@ -158,7 +167,6 @@
 }
 
 .course-why {
-
   h3 {
     max-width: 300px;
   }
@@ -265,7 +273,6 @@
 }
 
 .course-preview {
-
   @media (min-width: 990px) {
     margin-top: 260px;
   }
@@ -285,7 +292,6 @@
       transform: translateX(-50%);
     }
   }
-
 }
 
 .one-page {

@@ -225,7 +225,7 @@
   justify-content: space-between;
   gap: 30px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
     gap: 80px;
   }
@@ -233,8 +233,8 @@
   .course-card-content-wrap {
     width: 50%;
 
-    @media (max-width: 700px) {
-      width: clamp(200px, 100%, 350px);
+    @media (max-width: 1200px) {
+      width: clamp(200px, 100%, 500px);
       margin: 0 auto;
     }
 
@@ -256,13 +256,17 @@
     align-items: center;
     flex-direction: column;
 
-    @media (max-width: 700px) {
-      height: clamp(300px, 50vh, 500px);
+    @media (max-width: 1200px) {
+      height: clamp(250px, 40vh, 400px);
     }
 
     h3 {
       color: #fff;
       margin-bottom: 100px;
+
+      @media (max-width: 1200px) {
+        margin-bottom: 40px;
+      }
     }
 
     h4 {
@@ -301,7 +305,7 @@
     min-height: 100vh;
     align-items: center;
 
-    @media (max-width: 700px) {
+    @media (max-width: 1200px) {
       margin-top: 200px;
       justify-content: flex-start;
       margin-bottom: 100px;
@@ -315,7 +319,7 @@
       color: #fff;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 1200px) {
       margin-top: 0;
     }
   }
